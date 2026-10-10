@@ -708,6 +708,27 @@ public enum Message {
     SPAWN_PROTECTED_OPPED,
     SPAWN_SET_SUCCESS,
     SPAWN_TELEPORT_SUCCESS,
+    PLAYER_WELCOME("&aWelcome: &f{0}"),
+    PLAYER_WELCOME_BACK("&aWelcome back: &f{0}"),
+    SPAWN_ITEM_NAME("&6&lSpawn Menu"),
+    SPAWN_ITEM_LORE("&7Right-click to open the spawn menu."),
+    SPAWN_MENU_TITLE("&lSpawn Menu"),
+    SPAWN_MENU_TOP_NAME("&eTop Islands"),
+    SPAWN_MENU_TOP_LORE("&7See the best islands."),
+    SPAWN_MENU_PROFILE_NAME("&bProfile"),
+    SPAWN_MENU_PROFILE_NO_ISLAND("&7You do not have an island yet."),
+    SPAWN_MENU_PROFILE_ISLAND("&7Island: &f"),
+    SPAWN_MENU_PROFILE_ROLE("&7Role: &f"),
+    SPAWN_MENU_PROFILE_LEVEL("&7Level: &e"),
+    SPAWN_MENU_PROFILE_WORTH("&7Worth: &6"),
+    SPAWN_MENU_PROFILE_MEMBERS("&7Members: &f"),
+    SPAWN_MENU_CREATE_NAME("&aCreate Island"),
+    SPAWN_MENU_CREATE_LORE("&7Choose a type and create your island."),
+    SPAWN_MENU_CREATE_HAS_ISLAND("&cYou already have an island."),
+    SPAWN_MENU_LANGUAGE_NAME("Spanish"),
+    SPAWN_MENU_LANGUAGE_LORE("&7Switch the language to Spanish."),
+    SPAWN_LANGUAGE_CHANGED("&aLanguage changed to Spanish."),
+    SPAWN_ONLY_AT_SPAWN("&cYou can only use this item at spawn."),
     SPY_LOCAL_CHAT_FORMAT,
     SPY_TEAM_CHAT_FORMAT,
     SYNC_UPGRADES,
@@ -949,7 +970,16 @@ public enum Message {
 
     @Nullable
     public String getMessage(Locale locale, Object... args) {
-        return isEmpty(locale) ? defaultMessage : messages.get(locale).getMessage(args);
+        if (!isEmpty(locale))
+            return messages.get(locale).getMessage(args);
+
+        if (defaultMessage == null)
+            return null;
+
+        String output = defaultMessage;
+        for (int i = 0; i < args.length; i++)
+            output = output.replace("{" + i + "}", String.valueOf(args[i]));
+        return output;
     }
 
     public final void sendPlayerOrConsole(@Nullable SuperiorPlayer superiorPlayer) {

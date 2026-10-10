@@ -1,6 +1,7 @@
 package com.bgsoftware.superiorskyblock.listener;
 
 import com.bgsoftware.superiorskyblock.SuperiorSkyblockPlugin;
+import com.bgsoftware.superiorskyblock.spawnmenu.SpawnMenuListener;
 import org.bukkit.event.HandlerList;
 import org.bukkit.event.Listener;
 
@@ -46,6 +47,8 @@ public class BukkitListeners {
             new IslandPreviewListener(this.plugin);
 
         safeEventsRegister(new BukkitEventsListener(this.plugin));
+        safeEventsRegister(new JoinQuitMessagesListener(this.plugin));
+        safeEventsRegister(new SpawnMenuListener(this.plugin));
     }
 
     public void unregisterListeners() {

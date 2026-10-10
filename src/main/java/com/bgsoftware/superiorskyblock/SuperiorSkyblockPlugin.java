@@ -62,6 +62,7 @@ import com.bgsoftware.superiorskyblock.island.upgrade.loaders.PlaceholdersUpgrad
 import com.bgsoftware.superiorskyblock.island.upgrade.loaders.VaultUpgradeCostLoader;
 import com.bgsoftware.superiorskyblock.listener.BukkitListeners;
 import com.bgsoftware.superiorskyblock.scoreboard.IslandScoreboards;
+import com.bgsoftware.superiorskyblock.spawnmenu.SpawnMenu;
 import com.bgsoftware.superiorskyblock.mission.MissionsManagerImpl;
 import com.bgsoftware.superiorskyblock.mission.container.DefaultMissionsContainer;
 import com.bgsoftware.superiorskyblock.module.ModulesManagerImpl;
@@ -124,6 +125,7 @@ public class SuperiorSkyblockPlugin extends JavaPlugin implements SuperiorSkyblo
     private final Updater updater = new Updater(this, "superiorskyblock2");
     private final BukkitListeners bukkitListeners = new BukkitListeners(this);
     private final IslandScoreboards scoreboardsHandler = new IslandScoreboards(this);
+    private final SpawnMenu spawnMenuHandler = new SpawnMenu(this);
     private final PluginEventsDispatcher pluginEventsDispatcher = new PluginEventsDispatcher(this);
     private final GameEventsDispatcher gameEventsDispatcher = new GameEventsDispatcher(this);
     private IScriptEngine scriptEngine = EnginesFactory.createDefaultEngine();
@@ -555,6 +557,10 @@ public class SuperiorSkyblockPlugin extends JavaPlugin implements SuperiorSkyblo
 
     public IslandScoreboards getScoreboards() {
         return scoreboardsHandler;
+    }
+
+    public SpawnMenu getSpawnMenu() {
+        return spawnMenuHandler;
     }
 
     @Override
