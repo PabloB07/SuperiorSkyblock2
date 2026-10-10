@@ -40,7 +40,10 @@ import com.bgsoftware.superiorskyblock.core.logging.Debug;
 import com.bgsoftware.superiorskyblock.core.logging.Log;
 import com.bgsoftware.superiorskyblock.core.messages.Message;
 import com.bgsoftware.superiorskyblock.core.serialization.Serializers;
+import com.bgsoftware.superiorskyblock.api.service.portals.PortalsManagerService;
 import com.bgsoftware.superiorskyblock.core.threads.BukkitExecutor;
+import com.bgsoftware.superiorskyblock.service.portals.PortalsManagerServiceImpl;
+import com.bgsoftware.superiorskyblock.world.sift.SiftIslands;
 import com.bgsoftware.superiorskyblock.core.threads.Synchronized;
 import com.bgsoftware.superiorskyblock.island.algorithm.DefaultIslandCreationAlgorithm;
 import com.bgsoftware.superiorskyblock.island.builder.IslandBuilderImpl;
@@ -356,6 +359,17 @@ public class GridManagerImpl extends Manager implements GridManager {
             homeLocation = spawnOffset.applyToLocation(homeLocation);
 
         island.setIslandHome(defaultDimension, SWorldPosition.of(homeLocation));
+
+        if (SiftIslands.consume(builder.owner.getUniqueId())) {
+            BukkitExecutor.sync(() -> {
+                Dimension sift = com.bgsoftware.superiorskyblock.world.Dimensions.findByName("sift");
+                if (sift == null)
+                    return;
+                PortalsManagerServiceImpl portals = (PortalsManagerServiceImpl) plugin.getServices()
+                        .getService(PortalsManagerService.class);
+                portals.teleportIslandToDimension(builder.owner, island, sift);
+            }, 40L);
+        }
 
         BukkitExecutor.sync(() -> builder.owner.runIfOnline(player -> {
             if (updateGameMode)
@@ -788,10 +802,12 @@ public class GridManagerImpl extends Manager implements GridManager {
         Preconditions.checkNotNull(world, "world parameter cannot be null.");
 
         String dimensionName = world.getName().toUpperCase(Locale.ENGLISH);
-        try {
-            Dimension.register(dimensionName, world.getEnvironment());
-        } catch (Exception error) {
-            throw new IllegalArgumentException("Dimension with the name " + dimensionName + " already exists.");
+        if (com.bgsoftware.superiorskyblock.world.Dimensions.findByName(dimensionName) == null) {
+            try {
+                Dimension.register(dimensionName, world.getEnvironment());
+            } catch (Exception error) {
+                throw new IllegalArgumentException("Dimension with the name " + dimensionName + " already exists.");
+            }
         }
 
         customWorlds.add(world.getUID());

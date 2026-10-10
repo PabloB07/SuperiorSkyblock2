@@ -1,0 +1,13 @@
+﻿{
+    "temperature":  -0.5,
+    "effects":  {
+                    "water_color":  3123143,
+                    "water_fog_color":  1528414,
+                    "fog_color":  14221307,
+                    "grass_color":  12121087,
+                    "sky_color":  6280912,
+                    "foliage_color":  10545407
+                },
+    "downfall":  0.5,
+    "has_precipitation":  false
+}

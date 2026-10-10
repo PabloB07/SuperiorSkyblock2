@@ -1,0 +1,167 @@
+######################################################
+##                                                  ##
+##                SuperiorSkyblock 2                ##
+##                Developed by Ome_R                ##
+##                                                  ##
+######################################################
+
+title: '&lPanel de isla'
+previous-menu: true
+
+pattern:
+  - '2 2 2 2 2 2 2 2 2'
+  - '# ! # @ # $ # % #'
+  - '_ # ^ # & # * # 1'
+  - '# ~ # = # - # + #'
+  - '2 2 2 2 2 2 2 2 2'
+
+members: '+'
+settings: '@'
+visitors: '-'
+
+items:
+  '!':
+    type: OAK_SIGN
+    name: '&eTeletransportarse'
+    lore:
+      - '&7Vuelve a tu isla.'
+  '@':
+    type: REPEATER
+    name: '&eAjustes de la isla'
+    lore:
+      - '&7Gestiona los ajustes de tu isla.'
+  '$':
+    type: ENDER_PEARL
+    name: '&ePermisos de la isla'
+    lore:
+      - '&7Gestiona los permisos de tu isla.'
+  '%':
+    type: GRASS_BLOCK
+    name: '&eBiomas de la isla'
+    lore:
+      - '&7Cambia el bioma de tu isla.'
+  '_':
+    type: EMERALD
+    name: '&eBanco de la isla'
+    lore:
+      - '&7Abre el banco de tu isla.'
+  '^':
+    type: GOLD_INGOT
+    name: '&eMejoras de la isla'
+    lore:
+      - '&7Mejora las estadísticas de tu isla!'
+  '&':
+    type: BEACON
+    name: '&eTop islas'
+    lore:
+      - '&7Mira cuál es la mejor isla del servidor!'
+  '*':
+    type: PAPER
+    name: '&eMisiones de la isla'
+    lore:
+      - '&7Completa misiones y consigue recompensas!'
+  '1':
+    type: STONE_BRICKS
+    name: '&eContadores de la isla'
+    lore:
+      - '&7Mira todos los bloques de tu isla!'
+  '~':
+    type: BARRIER
+    name: '&eEliminar la isla'
+    lore:
+      - '&7Elimina tu isla.'
+      - '&cEsta acción no se puede deshacer!'
+  '=':
+    type: CHEST
+    name: '&eCofre de la isla'
+    lore:
+      - '&7Abre el cofre comunitario de la isla.'
+  '-':
+    type: SKELETON_SKULL
+    name: '&eVisitantes de la isla'
+    lore:
+      - '&7Mira todos los visitantes de la isla.'
+  '+':
+    type: PLAYER_HEAD
+    name: '&eMiembros de la isla'
+    lore:
+      - '&7Gestiona los miembros de la isla.'
+  '2':
+    type: BLACK_STAINED_GLASS_PANE
+    name: '&f'
+
+sounds:
+  '!':
+    type: ENTITY_EXPERIENCE_ORB_PICKUP
+    volume: 0.2
+    pitch: 0.2
+  '@':
+    type: ENTITY_EXPERIENCE_ORB_PICKUP
+    volume: 0.2
+    pitch: 0.2
+  '$':
+    type: ENTITY_EXPERIENCE_ORB_PICKUP
+    volume: 0.2
+    pitch: 0.2
+  '%':
+    type: ENTITY_EXPERIENCE_ORB_PICKUP
+    volume: 0.2
+    pitch: 0.2
+  '_':
+    type: ENTITY_EXPERIENCE_ORB_PICKUP
+    volume: 0.2
+    pitch: 0.2
+  '^':
+    type: ENTITY_EXPERIENCE_ORB_PICKUP
+    volume: 0.2
+    pitch: 0.2
+  '&':
+    type: ENTITY_EXPERIENCE_ORB_PICKUP
+    volume: 0.2
+    pitch: 0.2
+  '*':
+    type: ENTITY_EXPERIENCE_ORB_PICKUP
+    volume: 0.2
+    pitch: 0.2
+  '1':
+    type: ENTITY_EXPERIENCE_ORB_PICKUP
+    volume: 0.2
+    pitch: 0.2
+  '~':
+    type: ENTITY_EXPERIENCE_ORB_PICKUP
+    volume: 0.2
+    pitch: 0.2
+  '-':
+    type: ENTITY_EXPERIENCE_ORB_PICKUP
+    volume: 0.2
+    pitch: 0.2
+  '=':
+    type: ENTITY_EXPERIENCE_ORB_PICKUP
+    volume: 0.2
+    pitch: 0.2
+  '+':
+    type: ENTITY_EXPERIENCE_ORB_PICKUP
+    volume: 0.2
+    pitch: 0.2
+
+commands:
+  '!':
+    - '[player] is tp'
+  '$':
+    - '[player] is permissions'
+  '%':
+    - '[player] is biome'
+  '_':
+    - '[player] is bank'
+  '^':
+    - '[player] is upgrade'
+  '&':
+    - '[player] is top'
+  '*':
+    - '[player] is missions'
+  '1':
+    - '[player] is counts'
+  '~':
+    - '[player] is disband'
+  '=':
+    - '[player] is chest'

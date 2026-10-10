@@ -115,6 +115,7 @@ public class MenuIslandCreation extends AbstractMenu<MenuIslandCreation.View, Me
                 }
 
                 buttonBuilder.setOffset(itemSection.getBoolean("offset", false));
+                buttonBuilder.setSiftDimension(itemSection.getBoolean("sift", false));
 
                 if (itemSection.isString("spawn-offset"))
                     buttonBuilder.setSpawnOffset(Serializers.OFFSET_SPACED_SERIALIZER.deserialize(itemSection.getString("spawn-offset")));

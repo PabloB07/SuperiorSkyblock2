@@ -362,6 +362,14 @@ public class PortalsManagerServiceImpl implements PortalsManagerService, IServic
         return EntityPortalResult.SUCCEED;
     }
 
+    /**
+     * Sends a player to their island in a given dimension, generating the island schematic there the first time.
+     * Used for islands created directly into a dimension (for example the Sift dimension from the creation menu).
+     */
+    public EntityPortalResult teleportIslandToDimension(SuperiorPlayer superiorPlayer, Island island, Dimension destination) {
+        return handlePlayerPortalInternal(superiorPlayer, null, PortalType.ENDER, destination, false, island);
+    }
+
     @Nullable
     private Dimension getDestinationDimension(Dimension dimension, PortalType portalType) {
         SettingsManager.Worlds.DimensionConfig dimensionConfig = plugin.getSettings().getWorlds().getDimensionConfig(dimension);

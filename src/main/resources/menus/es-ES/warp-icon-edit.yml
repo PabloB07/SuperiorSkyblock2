@@ -1,0 +1,60 @@
+######################################################
+##                                                  ##
+##                SuperiorSkyblock 2                ##
+##                Developed by Ome_R                ##
+##                                                  ##
+######################################################
+
+title: '&lWarp: {0}'
+previous-menu: true
+
+pattern:
+  - '@ @ @ @ @ @ @ @ @'
+  - '@ ! @ @ @ @ @ ~ @'
+  - '@ @ @ @ ^ @ @ @ @'
+  - '@ $ @ @ @ @ @ % @'
+  - '@ @ @ @ @ @ @ @ @'
+
+icon-type: '!'
+icon-rename: '~'
+icon-relore: '$'
+icon-confirm: '%'
+icon-slots: '^'
+
+items:
+  '!':
+    type: DIAMOND
+    name: '&6Establecer tipo'
+    lore:
+      - '&f '
+      - '&f '
+      - '&7&o(( &f&oClic &7&opara editar el tipo del objeto. ))'
+  '~':
+    type: ANVIL
+    name: '&6Establecer nombre'
+    lore:
+      - '&f '
+      - '&f '
+      - '&7&o(( &f&oClic &7&opara editar el nombre del objeto. ))'
+  '$':
+    type: PAPER
+    name: '&6Establecer descripción'
+    lore:
+      - '&f '
+      - '&f '
+      - '&7&o(( &f&oClic &7&opara editar la descripción del objeto. ))'
+  '%':
+    type: EMERALD
+    name: '&6Confirmar cambios'
+    lore:
+      - '&f '
+      - '&f '
+      - '&7&o(( &f&oClic &7&opara confirmar los cambios. ))'
+  '^':
+    type: STONE
+
+sounds:
+  '%':
+    type: ENTITY_EXPERIENCE_ORB_PICKUP
+    volume: 0.2
+    pitch: 0.2

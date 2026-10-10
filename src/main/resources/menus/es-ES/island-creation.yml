@@ -1,0 +1,127 @@
+######################################################
+##                                                  ##
+##                SuperiorSkyblock 2                ##
+##                Developed by Ome_R                ##
+##                                                  ##
+######################################################
+
+title: '&lCrea una nueva isla...'
+previous-menu: true
+
+pattern:
+  - '~ ~ ~ ~ & ~ ~ ~ ~'
+  - '# @ # # ^ # # $ #'
+  - '~ ~ ~ ~ ~ ~ ~ ~ ~'
+
+items:
+  '@':
+    schematic: 'normal'
+    biome: PLAINS
+    spawn-offset: '0, 0, 0'
+    access:
+      type: PLAYER_HEAD
+      skull: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzk1ZDM3OTkzZTU5NDA4MjY3ODQ3MmJmOWQ4NjgyMzQxM2MyNTBkNDMzMmEyYzdkOGM1MmRlNDk3NmIzNjIifX19'
+      name: '&eIsla normal &a(Disponible)'
+      lore:
+        - '&7Isla simple con árboles y una zona de minería!'
+        - '&7 '
+        - '&7&o(( &f&oClic derecho &7&opara previsualizar la isla. ))'
+    no-access:
+      type: PLAYER_HEAD
+      skull: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzk1ZDM3OTkzZTU5NDA4MjY3ODQ3MmJmOWQ4NjgyMzQxM2MyNTBkNDMzMmEyYzdkOGM1MmRlNDk3NmIzNjIifX19'
+      name: '&eIsla normal &c(No disponible)'
+      lore:
+        - '&7Isla simple con árboles y una zona de minería!'
+        - '&7 '
+        - '&7&o(( &f&oClic derecho &7&opara previsualizar la isla. ))'
+  '^':
+    schematic: 'mycel'
+    biome: MUSHROOM_FIELDS
+    spawn-offset: '0, 0, 0'
+    access:
+      type: PLAYER_HEAD
+      skull: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWE0NWQxYjQxN2NiZGRjMjE3NjdiMDYwNDRlODk5YjI2NmJmNzhhNjZlMjE4NzZiZTNjMDUxNWFiNTVkNzEifX19'
+      name: '&eIsla de micelio &a(Disponible)'
+      lore:
+        - '&7Isla personalizada con mucho micelio!'
+        - '&7 '
+        - '&7&o(( &f&oClic derecho &7&opara previsualizar la isla. ))'
+    no-access:
+      type: PLAYER_HEAD
+      skull: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWE0NWQxYjQxN2NiZGRjMjE3NjdiMDYwNDRlODk5YjI2NmJmNzhhNjZlMjE4NzZiZTNjMDUxNWFiNTVkNzEifX19'
+      name: '&eIsla de micelio &c(No disponible)'
+      lore:
+        - '&7Isla personalizada con mucho micelio!'
+        - '&7 '
+        - '&7&o(( &f&oClic derecho &7&opara previsualizar la isla. ))'
+  '$':
+    schematic: 'desert'
+    biome: DESERT
+    spawn-offset: '0, 0, 0'
+    access:
+      type: PLAYER_HEAD
+      skull: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjVkYjMxMjA2N2JlMWQ1YzRmMTQ3OGFmM2NhMmY2Y2Y4MTA0YWI0Y2NiZmY1NzkxN2M4NTc4ZGFhMTUwMDJjMiJ9fX0='
+      name: '&eIsla desértica &a(Disponible)'
+      lore:
+        - '&7Isla personalizada con mucha arena!'
+        - '&7 '
+        - '&7&o(( &f&oClic derecho &7&opara previsualizar la isla. ))'
+    no-access:
+      type: PLAYER_HEAD
+      skull: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjVkYjMxMjA2N2JlMWQ1YzRmMTQ3OGFmM2NhMmY2Y2Y4MTA0YWI0Y2NiZmY1NzkxN2M4NTc4ZGFhMTUwMDJjMiJ9fX0='
+      name: '&eIsla desértica &c(No disponible)'
+      lore:
+        - '&7Isla personalizada con mucha arena!'
+        - '&7 '
+        - '&7&o(( &f&oClic derecho &7&opara previsualizar la isla. ))'
+  '&':
+    schematic: 'normal'
+    biome: PLAINS
+    spawn-offset: '0, 0, 0'
+    sift: true
+    access:
+      type: AMETHYST_BLOCK
+      name: '&dIsla Sift &a(Disponible)'
+      lore:
+        - '&7Isla en la dimensión Sift, con sus biomas propios.'
+        - '&7 '
+        - '&7&o(( &f&oClic &7&opara crear tu isla Sift. ))'
+    no-access:
+      type: AMETHYST_BLOCK
+      name: '&dIsla Sift &c(No disponible)'
+      lore:
+        - '&7Isla en la dimensión Sift, con sus biomas propios.'
+        - '&7 '
+        - '&7&o(( &f&oClic &7&opara crear tu isla Sift. ))'
+  '~':
+    type: BLACK_STAINED_GLASS_PANE
+    name: '&f'
+
+sounds:
+  '@':
+    access:
+      type: BLOCK_PORTAL_AMBIENT
+      volume: 1
+      pitch: 0.2
+    no-access:
+      type: BLOCK_ANVIL_PLACE
+      volume: 0.2
+      pitch: 0.2
+  '^':
+    access:
+      type: BLOCK_PORTAL_AMBIENT
+      volume: 1
+      pitch: 0.2
+    no-access:
+      type: BLOCK_ANVIL_PLACE
+      volume: 0.2
+      pitch: 0.2
+  '$':
+    access:
+      type: BLOCK_PORTAL_AMBIENT
+      volume: 1
+      pitch: 0.2
+    no-access:
+      type: BLOCK_ANVIL_PLACE
+      volume: 0.2
+      pitch: 0.2

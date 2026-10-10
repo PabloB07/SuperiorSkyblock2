@@ -1,0 +1,49 @@
+######################################################
+##                                                  ##
+##                SuperiorSkyblock 2                ##
+##                Developed by Ome_R                ##
+##                                                  ##
+######################################################
+
+title: '&lJugadores baneados de la isla ({0})'
+previous-menu: true
+
+pattern:
+  - '@ @ @ @ @ @ @ @ @'
+  - '@ @ @ @ @ @ @ @ @'
+  - '@ @ @ @ @ @ @ @ @'
+  - '@ @ @ @ @ @ @ @ @'
+  - '$ $ $ $ $ $ $ $ $'
+  - '# # % # * # ^ # #'
+
+slots: '@'
+previous-page: '%'
+current-page: '*'
+next-page: '^'
+
+items:
+  '@':
+    type: PLAYER_HEAD
+    name: '&e{0}'
+    lore:
+      - '&7Haz clic para desbanear al jugador.'
+  '%':
+    type: PAPER
+    name: '{0}Página anterior'
+  '*':
+    type: SUNFLOWER
+    name: '&aPágina actual'
+    lore:
+      - '&7Página {0}'
+  '^':
+    type: PAPER
+    name: '{0}Página siguiente'
+  '$':
+    type: BLACK_STAINED_GLASS_PANE
+    name: '&f'
+
+sounds:
+  '@':
+    type: ENTITY_EXPERIENCE_ORB_PICKUP
+    volume: 0.2
+    pitch: 0.2

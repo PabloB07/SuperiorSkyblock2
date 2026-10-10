@@ -138,6 +138,7 @@ public class SettingsContainer {
     public final Material spawnPortalBlock;
     public final boolean scoreboardEnabled;
     public final long scoreboardUpdateInterval;
+    public final String menusLanguage;
     public final Set<String> worldPermissions;
     public final boolean voidTeleportMembers;
     public final boolean voidTeleportVisitors;
@@ -396,6 +397,7 @@ public class SettingsContainer {
         spawnPortalBlock = EnumHelper.getEnum(Material.class, config.getString("spawn.portal-block", "GOLD_BLOCK"));
         scoreboardEnabled = config.getBoolean("scoreboard.enabled", true);
         scoreboardUpdateInterval = Math.max(1L, config.getLong("scoreboard.update-interval", 20L));
+        menusLanguage = config.getString("menus-language", "es-ES");
         worldPermissions = Collections.unmodifiableSet(new LinkedHashSet<>(config.getStringList("world-permissions")
                 .stream().map(str -> str.toUpperCase(Locale.ENGLISH)).collect(Collectors.toSet())));
         voidTeleportMembers = config.getBoolean("void-teleport.members", true);

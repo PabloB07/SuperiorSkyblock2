@@ -63,6 +63,7 @@ import com.bgsoftware.superiorskyblock.island.upgrade.loaders.VaultUpgradeCostLo
 import com.bgsoftware.superiorskyblock.listener.BukkitListeners;
 import com.bgsoftware.superiorskyblock.scoreboard.IslandScoreboards;
 import com.bgsoftware.superiorskyblock.spawnmenu.SpawnMenu;
+import com.bgsoftware.superiorskyblock.world.sift.SiftWorld;
 import com.bgsoftware.superiorskyblock.mission.MissionsManagerImpl;
 import com.bgsoftware.superiorskyblock.mission.container.DefaultMissionsContainer;
 import com.bgsoftware.superiorskyblock.module.ModulesManagerImpl;
@@ -496,6 +497,8 @@ public class SuperiorSkyblockPlugin extends JavaPlugin implements SuperiorSkyblo
             gridHandler.syncUpgrades();
             schematicsHandler.loadSchematics();
         }
+
+        SiftWorld.load(this);
 
         menusHandler.loadData();
         missionsHandler.loadData();

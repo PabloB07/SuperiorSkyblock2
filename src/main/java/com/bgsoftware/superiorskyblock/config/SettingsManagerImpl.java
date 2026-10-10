@@ -230,6 +230,10 @@ public class SettingsManagerImpl extends Manager implements SettingsManager {
         return this.scoreboard;
     }
 
+    public String getMenusLanguage() {
+        return this.global.getMenusLanguage();
+    }
+
     @Override
     public Collection<String> getWorldPermissions() {
         return this.global.getWorldPermissions();

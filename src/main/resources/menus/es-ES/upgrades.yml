@@ -1,0 +1,1213 @@
+######################################################
+##                                                  ##
+##                SuperiorSkyblock 2                ##
+##                Developed by Ome_R                ##
+##                                                  ##
+######################################################
+
+title: '&lMejoras de la isla'
+previous-menu: true
+
+pattern:
+  - '$ $ $ $ $ $ $ $ $'
+  - '# # @ # % # ^ # #'
+  - '# # # ! # + # # #'
+  - '# # * # ~ # & # #'
+  - '$ $ $ $ $ $ $ $ $'
+
+items:
+  '$':
+    type: BLACK_STAINED_GLASS_PANE
+    name: '&f'
+
+upgrades:
+  hoppers-limit:
+    item: '@'
+    '1':
+      has-next-level:
+        type: HOPPER
+        name: '&d&lLímite de tolvas &a(Disponible)'
+        lore:
+          - '&7'
+          - '&dNext Level: &e2'
+          - '&7'
+          - '&7Comprar la mejora de tolvas'
+          - '&7aumentará el máximo''s'
+          - '&7de tolvas de tu isla.'
+          - '&7'
+          - '&dCantidad: &f16x Tolvas'
+          - '&dPrecio: &f$1,000,000'
+          - '&7'
+          - '&aClic para comprar la mejora.'
+        sound:
+          type: ENTITY_EXPERIENCE_ORB_PICKUP
+          volume: 0.2
+          pitch: 0.2
+      no-next-level:
+        type: HOPPER
+        name: '&d&lLímite de tolvas &c(No disponible)'
+        lore:
+          - '&7'
+          - '&dNext Level: &e2'
+          - '&7'
+          - '&7Comprar la mejora de tolvas'
+          - '&7aumentará el máximo''s'
+          - '&7de tolvas de tu isla.'
+          - '&7'
+          - '&dCantidad: &f16x Tolvas'
+          - '&dPrecio: &f$1,000,000'
+          - '&7'
+          - '&aClic para comprar la mejora.'
+        sound:
+          type: BLOCK_ANVIL_PLACE
+          volume: 0.2
+          pitch: 0.2
+    '2':
+      has-next-level:
+        type: HOPPER
+        name: '&d&lLímite de tolvas &a(Disponible)'
+        lore:
+          - '&7'
+          - '&dNext Level: &e3'
+          - '&7'
+          - '&7Comprar la mejora de tolvas'
+          - '&7aumentará el máximo''s'
+          - '&7de tolvas de tu isla.'
+          - '&7'
+          - '&dCantidad: &f32x Tolvas'
+          - '&dPrecio: &f$3,000,000'
+          - '&7'
+          - '&aClic para comprar la mejora.'
+        sound:
+          type: ENTITY_EXPERIENCE_ORB_PICKUP
+          volume: 0.2
+          pitch: 0.2
+      no-next-level:
+        type: HOPPER
+        name: '&d&lLímite de tolvas &c(No disponible)'
+        lore:
+          - '&7'
+          - '&dNext Level: &e3'
+          - '&7'
+          - '&7Comprar la mejora de tolvas'
+          - '&7aumentará el máximo''s'
+          - '&7de tolvas de tu isla.'
+          - '&7'
+          - '&dCantidad: &f32x Tolvas'
+          - '&dPrecio: &f$3,000,000'
+          - '&7'
+          - '&aClic para comprar la mejora.'
+        sound:
+          type: BLOCK_ANVIL_PLACE
+          volume: 0.2
+          pitch: 0.2
+    '3':
+      has-next-level:
+        type: HOPPER
+        name: '&d&lLímite de tolvas &a(Disponible)'
+        lore:
+          - '&7'
+          - '&dNext Level: &e4'
+          - '&7'
+          - '&7Comprar la mejora de tolvas'
+          - '&7aumentará el máximo''s'
+          - '&7de tolvas de tu isla.'
+          - '&7'
+          - '&dCantidad: &f64x Tolvas'
+          - '&dPrecio: &f$9,000,000'
+          - '&7'
+          - '&aClic para comprar la mejora.'
+        sound:
+          type: ENTITY_EXPERIENCE_ORB_PICKUP
+          volume: 0.2
+          pitch: 0.2
+      no-next-level:
+        type: HOPPER
+        name: '&d&lLímite de tolvas &c(No disponible)'
+        lore:
+          - '&7'
+          - '&dNext Level: &e2'
+          - '&7'
+          - '&7Comprar la mejora de tolvas'
+          - '&7aumentará el máximo''s'
+          - '&7de tolvas de tu isla.'
+          - '&7'
+          - '&dCantidad: &f64x Tolvas'
+          - '&dPrecio: &f$9,000,000'
+          - '&7'
+          - '&aClic para comprar la mejora.'
+        sound:
+          type: BLOCK_ANVIL_PLACE
+          volume: 0.2
+          pitch: 0.2
+    '4':
+      has-next-level:
+        type: HOPPER
+        name: '&c&lNIVEL MÁXIMO'
+        lore:
+          - '&7Has alcanzado el nivel máximo'
+          - '&7de tolvas permitidas!'
+        sound:
+          type: BLOCK_ANVIL_PLACE
+          volume: 0.2
+          pitch: 0.2
+      no-next-level:
+        type: HOPPER
+        name: '&c&lNIVEL MÁXIMO'
+        lore:
+          - '&7Has alcanzado el nivel máximo'
+          - '&7de tolvas permitidas!'
+        sound:
+          type: BLOCK_ANVIL_PLACE
+          volume: 0.2
+          pitch: 0.2
+  crop-growth:
+    item: '%'
+    '1':
+      has-next-level:
+        type: DIAMOND_HOE
+        name: '&e&lCrecimiento de cultivos &a(Disponible)'
+        lore:
+          - '&7'
+          - '&eNext Level: 2'
+          - '&7'
+          - '&7Comprar la mejora de crecimiento'
+          - '&7hace que todos los cultivos de tu isla'
+          - '&7crezcan más rápido.'
+          - '&7'
+          - '&eCrecimiento: &fvelocidad x2'
+          - '&ePrecio: &f$100,000'
+          - '&7'
+          - '&aClic para comprar la mejora.'
+        flags:
+          - HIDE_ATTRIBUTES
+        sound:
+          type: ENTITY_EXPERIENCE_ORB_PICKUP
+          volume: 0.2
+          pitch: 0.2
+      no-next-level:
+        type: DIAMOND_HOE
+        name: '&e&lCrecimiento de cultivos &c(No disponible)'
+        lore:
+          - '&7'
+          - '&eNext Level: 2'
+          - '&7'
+          - '&7Comprar la mejora de crecimiento'
+          - '&7hace que todos los cultivos de tu isla'
+          - '&7crezcan más rápido.'
+          - '&7'
+          - '&eCrecimiento: &fvelocidad x2'
+          - '&ePrecio: &f$100,000'
+          - '&7'
+          - '&aClic para comprar la mejora.'
+        flags:
+          - HIDE_ATTRIBUTES
+        sound:
+          type: BLOCK_ANVIL_PLACE
+          volume: 0.2
+          pitch: 0.2
+    '2':
+      has-next-level:
+        type: DIAMOND_HOE
+        name: '&e&lCrecimiento de cultivos &a(Disponible)'
+        lore:
+          - '&7'
+          - '&eNext Level: 3'
+          - '&7'
+          - '&7Comprar la mejora de crecimiento'
+          - '&7hace que todos los cultivos de tu isla'
+          - '&7crezcan más rápido.'
+          - '&7'
+          - '&eCrecimiento: &fvelocidad x3'
+          - '&ePrecio: &f$500,000'
+          - '&7'
+          - '&aClic para comprar la mejora.'
+        flags:
+          - HIDE_ATTRIBUTES
+        sound:
+          type: ENTITY_EXPERIENCE_ORB_PICKUP
+          volume: 0.2
+          pitch: 0.2
+      no-next-level:
+        type: DIAMOND_HOE
+        name: '&e&lCrecimiento de cultivos &c(No disponible)'
+        lore:
+          - '&7'
+          - '&eNext Level: 3'
+          - '&7'
+          - '&7Comprar la mejora de crecimiento'
+          - '&7hace que todos los cultivos de tu isla'
+          - '&7crezcan más rápido.'
+          - '&7'
+          - '&eCrecimiento: &fvelocidad x3'
+          - '&ePrecio: &f$500,000'
+          - '&7'
+          - '&aClic para comprar la mejora.'
+        flags:
+          - HIDE_ATTRIBUTES
+        sound:
+          type: BLOCK_ANVIL_PLACE
+          volume: 0.2
+          pitch: 0.2
+    '3':
+      has-next-level:
+        type: DIAMOND_HOE
+        name: '&e&lCrecimiento de cultivos &a(Disponible)'
+        lore:
+          - '&7'
+          - '&eNext Level: 4'
+          - '&7'
+          - '&7Comprar la mejora de crecimiento'
+          - '&7hace que todos los cultivos de tu isla'
+          - '&7crezcan más rápido.'
+          - '&7'
+          - '&eCrecimiento: &fvelocidad x4'
+          - '&ePrecio: &f$1,000,000'
+          - '&7'
+          - '&aClic para comprar la mejora.'
+        flags:
+          - HIDE_ATTRIBUTES
+        sound:
+          type: ENTITY_EXPERIENCE_ORB_PICKUP
+          volume: 0.2
+          pitch: 0.2
+      no-next-level:
+        type: DIAMOND_HOE
+        name: '&e&lCrecimiento de cultivos &c(No disponible)'
+        lore:
+          - '&7'
+          - '&eNext Level: 4'
+          - '&7'
+          - '&7Comprar la mejora de crecimiento'
+          - '&7hace que todos los cultivos de tu isla'
+          - '&7crezcan más rápido.'
+          - '&7'
+          - '&eCrecimiento: &fvelocidad x4'
+          - '&ePrecio: &f$1,000,000'
+          - '&7'
+          - '&aClic para comprar la mejora.'
+        flags:
+          - HIDE_ATTRIBUTES
+        sound:
+          type: BLOCK_ANVIL_PLACE
+          volume: 0.2
+          pitch: 0.2
+    '4':
+      has-next-level:
+        type: DIAMOND_HOE
+        name: '&c&lNIVEL MÁXIMO'
+        lore:
+          - '&7Has alcanzado el nivel máximo'
+          - '&7de crecimiento de cultivos!'
+        flags:
+          - HIDE_ATTRIBUTES
+        sound:
+          type: BLOCK_ANVIL_PLACE
+          volume: 0.2
+          pitch: 0.2
+      no-next-level:
+        type: DIAMOND_HOE
+        name: '&c&lNIVEL MÁXIMO'
+        lore:
+          - '&7Has alcanzado el nivel máximo'
+          - '&7de crecimiento de cultivos!'
+        flags:
+          - HIDE_ATTRIBUTES
+        sound:
+          type: BLOCK_ANVIL_PLACE
+          volume: 0.2
+          pitch: 0.2
+  spawner-rates:
+    item: '^'
+    '1':
+      has-next-level:
+        type: SPAWNER
+        name: '&b&lVelocidad de generadores &a(Disponible)'
+        lore:
+          - '&7'
+          - '&bNext Level: &e2'
+          - '&7'
+          - '&7Comprar la mejora de generadores'
+          - '&7hace que todos los generadores de tu isla'
+          - '&7aparezcan más rápido.'
+          - '&7'
+          - '&bAumento: &fvelocidad x2'
+          - '&bPrecio: &f$500,000'
+          - '&7'
+          - '&aClic para comprar la mejora.'
+        flags:
+          - HIDE_ADDITIONAL_TOOLTIP
+        sound:
+          type: ENTITY_EXPERIENCE_ORB_PICKUP
+          volume: 0.2
+          pitch: 0.2
+      no-next-level:
+        type: SPAWNER
+        name: '&b&lVelocidad de generadores &c(No disponible)'
+        lore:
+          - '&7'
+          - '&bNext Level: &e2'
+          - '&7'
+          - '&7Comprar la mejora de generadores'
+          - '&7hace que todos los generadores de tu isla'
+          - '&7aparezcan más rápido.'
+          - '&7'
+          - '&bAumento: &fvelocidad x2'
+          - '&bPrecio: &f$500,000'
+          - '&7'
+          - '&aClic para comprar la mejora.'
+        flags:
+          - HIDE_ADDITIONAL_TOOLTIP
+        sound:
+          type: BLOCK_ANVIL_PLACE
+          volume: 0.2
+          pitch: 0.2
+    '2':
+      has-next-level:
+        type: SPAWNER
+        name: '&b&lVelocidad de generadores &a(Disponible)'
+        lore:
+          - '&7'
+          - '&bNext Level: &e3'
+          - '&7'
+          - '&7Comprar la mejora de generadores'
+          - '&7hace que todos los generadores de tu isla'
+          - '&7aparezcan más rápido.'
+          - '&7'
+          - '&bAumento: &fvelocidad x3'
+          - '&bPrecio: &f$1,000,000'
+          - '&7'
+          - '&aClic para comprar la mejora.'
+        flags:
+          - HIDE_ADDITIONAL_TOOLTIP
+        sound:
+          type: ENTITY_EXPERIENCE_ORB_PICKUP
+          volume: 0.2
+          pitch: 0.2
+      no-next-level:
+        type: SPAWNER
+        name: '&b&lVelocidad de generadores &c(No disponible)'
+        lore:
+          - '&7'
+          - '&bNext Level: &e3'
+          - '&7'
+          - '&7Comprar la mejora de generadores'
+          - '&7hace que todos los generadores de tu isla'
+          - '&7aparezcan más rápido.'
+          - '&7'
+          - '&bAumento: &fvelocidad x3'
+          - '&bPrecio: &f$1,000,000'
+          - '&7'
+          - '&aClic para comprar la mejora.'
+        flags:
+          - HIDE_ADDITIONAL_TOOLTIP
+        sound:
+          type: BLOCK_ANVIL_PLACE
+          volume: 0.2
+          pitch: 0.2
+    '3':
+      has-next-level:
+        type: SPAWNER
+        name: '&b&lVelocidad de generadores &a(Disponible)'
+        lore:
+          - '&7'
+          - '&bNext Level: &e4'
+          - '&7'
+          - '&7Comprar la mejora de generadores'
+          - '&7hace que todos los generadores de tu isla'
+          - '&7aparezcan más rápido.'
+          - '&7'
+          - '&bAumento: &fvelocidad x4'
+          - '&bPrecio: &f$2,500,000'
+          - '&7'
+          - '&aClic para comprar la mejora.'
+        flags:
+          - HIDE_ADDITIONAL_TOOLTIP
+        sound:
+          type: ENTITY_EXPERIENCE_ORB_PICKUP
+          volume: 0.2
+          pitch: 0.2
+      no-next-level:
+        type: SPAWNER
+        name: '&b&lVelocidad de generadores &c(No disponible)'
+        lore:
+          - '&7'
+          - '&bNext Level: &e4'
+          - '&7'
+          - '&7Comprar la mejora de generadores'
+          - '&7hace que todos los generadores de tu isla'
+          - '&7aparezcan más rápido.'
+          - '&7'
+          - '&bAumento: &fvelocidad x4'
+          - '&bPrecio: &f$2,500,000'
+          - '&7'
+          - '&aClic para comprar la mejora.'
+        flags:
+          - HIDE_ADDITIONAL_TOOLTIP
+        sound:
+          type: BLOCK_ANVIL_PLACE
+          volume: 0.2
+          pitch: 0.2
+    '4':
+      has-next-level:
+        type: SPAWNER
+        name: '&c&lNIVEL MÁXIMO'
+        lore:
+          - '&7Has alcanzado el nivel máximo'
+          - '&7de velocidad de generadores!'
+        flags:
+          - HIDE_ADDITIONAL_TOOLTIP
+        sound:
+          type: BLOCK_ANVIL_PLACE
+          volume: 0.2
+          pitch: 0.2
+      no-next-level:
+        type: SPAWNER
+        name: '&c&lNIVEL MÁXIMO'
+        lore:
+          - '&7Has alcanzado el nivel máximo'
+          - '&7de velocidad de generadores!'
+        flags:
+          - HIDE_ADDITIONAL_TOOLTIP
+        sound:
+          type: BLOCK_ANVIL_PLACE
+          volume: 0.2
+          pitch: 0.2
+  mob-drops:
+    item: '*'
+    '1':
+      has-next-level:
+        type: ROTTEN_FLESH
+        name: '&4&lBotín premium &a(Disponible)'
+        lore:
+          - '&7'
+          - '&4Next Level: &e2'
+          - '&7'
+          - '&7Comprar la mejora de botín'
+          - '&7hace que todos los mobs de tu isla'
+          - '&7suelten más botín.'
+          - '&7'
+          - '&4Cantidad: &fx2 Drops'
+          - '&4Precio: &f$1,000,000'
+          - '&7'
+          - '&aClic para comprar la mejora.'
+        sound:
+          type: ENTITY_EXPERIENCE_ORB_PICKUP
+          volume: 0.2
+          pitch: 0.2
+      no-next-level:
+        type: ROTTEN_FLESH
+        name: '&4&lBotín premium &c(No disponible)'
+        lore:
+          - '&7'
+          - '&4Next Level: &e2'
+          - '&7'
+          - '&7Comprar la mejora de botín'
+          - '&7hace que todos los mobs de tu isla'
+          - '&7suelten más botín.'
+          - '&7'
+          - '&4Cantidad: &fx2 Drops'
+          - '&4Precio: &f$1,000,000'
+          - '&7'
+          - '&aClic para comprar la mejora.'
+        sound:
+          type: BLOCK_ANVIL_PLACE
+          volume: 0.2
+          pitch: 0.2
+    '2':
+      has-next-level:
+        type: ROTTEN_FLESH
+        name: '&4&lBotín premium &a(Disponible)'
+        lore:
+          - '&7'
+          - '&4Next Level: &e3'
+          - '&7'
+          - '&7Comprar la mejora de botín'
+          - '&7hace que todos los mobs de tu isla'
+          - '&7suelten más botín.'
+          - '&7'
+          - '&4Cantidad: &fx3 Drops'
+          - '&4Precio: &f$2,000,000'
+          - '&7'
+          - '&aClic para comprar la mejora.'
+        sound:
+          type: ENTITY_EXPERIENCE_ORB_PICKUP
+          volume: 0.2
+          pitch: 0.2
+      no-next-level:
+        type: ROTTEN_FLESH
+        name: '&4&lBotín premium &c(No disponible)'
+        lore:
+          - '&7'
+          - '&4Next Level: &e3'
+          - '&7'
+          - '&7Comprar la mejora de botín'
+          - '&7hace que todos los mobs de tu isla'
+          - '&7suelten más botín.'
+          - '&7'
+          - '&4Cantidad: &fx3 Drops'
+          - '&4Precio: &f$2,000,000'
+          - '&7'
+          - '&aClic para comprar la mejora.'
+        sound:
+          type: BLOCK_ANVIL_PLACE
+          volume: 0.2
+          pitch: 0.2
+    '3':
+      has-next-level:
+        type: ROTTEN_FLESH
+        name: '&4&lBotín premium &a(Disponible)'
+        lore:
+          - '&7'
+          - '&4Next Level: &e4'
+          - '&7'
+          - '&7Comprar la mejora de botín'
+          - '&7hace que todos los mobs de tu isla'
+          - '&7suelten más botín.'
+          - '&7'
+          - '&4Cantidad: &fx4 Drops'
+          - '&4Precio: &f$5,000,000'
+          - '&7'
+          - '&aClic para comprar la mejora.'
+        sound:
+          type: ENTITY_EXPERIENCE_ORB_PICKUP
+          volume: 0.2
+          pitch: 0.2
+      no-next-level:
+        type: ROTTEN_FLESH
+        name: '&4&lBotín premium &c(No disponible)'
+        lore:
+          - '&7'
+          - '&4Next Level: &e4'
+          - '&7'
+          - '&7Comprar la mejora de botín'
+          - '&7hace que todos los mobs de tu isla'
+          - '&7suelten más botín.'
+          - '&7'
+          - '&4Cantidad: &fx4 Drops'
+          - '&4Precio: &f$5,000,000'
+          - '&7'
+          - '&aClic para comprar la mejora.'
+        sound:
+          type: BLOCK_ANVIL_PLACE
+          volume: 0.2
+          pitch: 0.2
+    '4':
+      has-next-level:
+        type: ROTTEN_FLESH
+        name: '&c&lNIVEL MÁXIMO'
+        lore:
+          - '&7Has alcanzado el nivel máximo'
+          - '&7de botín de mobs!'
+        sound:
+          type: BLOCK_ANVIL_PLACE
+          volume: 0.2
+          pitch: 0.2
+      no-next-level:
+        type: ROTTEN_FLESH
+        name: '&c&lNIVEL MÁXIMO'
+        lore:
+          - '&7Has alcanzado el nivel máximo'
+          - '&7de botín de mobs!'
+        sound:
+          type: BLOCK_ANVIL_PLACE
+          volume: 0.2
+          pitch: 0.2
+  members-limit:
+    item: '~'
+    '1':
+      has-next-level:
+        type: PLAYER_HEAD
+        name: '&2&lTamaño de miembros &a(Disponible)'
+        lore:
+          - '&7'
+          - '&2Next Level: &e2'
+          - '&7'
+          - '&7Comprar la mejora de miembros'
+          - '&7aumentará el número máximo'
+          - '&7de miembros de tu isla.'
+          - '&7'
+          - '&2Cantidad: &f8 Miembros'
+          - '&2Precio: &f$100,000'
+          - '&7'
+          - '&aClic para comprar la mejora.'
+        sound:
+          type: ENTITY_EXPERIENCE_ORB_PICKUP
+          volume: 0.2
+          pitch: 0.2
+      no-next-level:
+        type: PLAYER_HEAD
+        name: '&2&lTamaño de miembros &c(No disponible)'
+        lore:
+          - '&7'
+          - '&2Next Level: &e2'
+          - '&7'
+          - '&7Comprar la mejora de miembros'
+          - '&7aumentará el número máximo'
+          - '&7de miembros de tu isla.'
+          - '&7'
+          - '&2Cantidad: &f8 Miembros'
+          - '&2Precio: &f$100,000'
+          - '&7'
+          - '&aClic para comprar la mejora.'
+        sound:
+          type: BLOCK_ANVIL_PLACE
+          volume: 0.2
+          pitch: 0.2
+    '2':
+      has-next-level:
+        type: PLAYER_HEAD
+        name: '&2&lTamaño de miembros &a(Disponible)'
+        lore:
+          - '&7'
+          - '&2Next Level: &e3'
+          - '&7'
+          - '&7Comprar la mejora de miembros'
+          - '&7aumentará el número máximo'
+          - '&7de miembros de tu isla.'
+          - '&7'
+          - '&2Cantidad: &f16 Miembros'
+          - '&2Precio: &f$300,000'
+          - '&7'
+          - '&aClic para comprar la mejora.'
+        sound:
+          type: ENTITY_EXPERIENCE_ORB_PICKUP
+          volume: 0.2
+          pitch: 0.2
+      no-next-level:
+        type: PLAYER_HEAD
+        name: '&2&lTamaño de miembros &c(No disponible)'
+        lore:
+          - '&7'
+          - '&2Next Level: &e3'
+          - '&7'
+          - '&7Comprar la mejora de miembros'
+          - '&7aumentará el número máximo'
+          - '&7de miembros de tu isla.'
+          - '&7'
+          - '&2Cantidad: &f16 Miembros'
+          - '&2Precio: &f$300,000'
+          - '&7'
+          - '&aClic para comprar la mejora.'
+        sound:
+          type: BLOCK_ANVIL_PLACE
+          volume: 0.2
+          pitch: 0.2
+    '3':
+      has-next-level:
+        type: PLAYER_HEAD
+        name: '&2&lTamaño de miembros &a(Disponible)'
+        lore:
+          - '&7'
+          - '&2Next Level: &e4'
+          - '&7'
+          - '&7Comprar la mejora de miembros'
+          - '&7aumentará el número máximo'
+          - '&7de miembros de tu isla.'
+          - '&7'
+          - '&2Cantidad: &f32 Miembros'
+          - '&2Precio: &f$500,000'
+          - '&7'
+          - '&aClic para comprar la mejora.'
+        sound:
+          type: ENTITY_EXPERIENCE_ORB_PICKUP
+          volume: 0.2
+          pitch: 0.2
+      no-next-level:
+        type: PLAYER_HEAD
+        name: '&2&lTamaño de miembros &c(No disponible)'
+        lore:
+          - '&7'
+          - '&2Next Level: &e4'
+          - '&7'
+          - '&7Comprar la mejora de miembros'
+          - '&7aumentará el número máximo'
+          - '&7de miembros de tu isla.'
+          - '&7'
+          - '&2Cantidad: &f32 Miembros'
+          - '&2Precio: &f$500,000'
+          - '&7'
+          - '&aClic para comprar la mejora.'
+        sound:
+          type: BLOCK_ANVIL_PLACE
+          volume: 0.2
+          pitch: 0.2
+    '4':
+      has-next-level:
+        type: PLAYER_HEAD
+        name: '&c&lNIVEL MÁXIMO'
+        lore:
+          - '&7Has alcanzado el nivel máximo'
+          - '&7de miembros permitidos!'
+        sound:
+          type: BLOCK_ANVIL_PLACE
+          volume: 0.2
+          pitch: 0.2
+      no-next-level:
+        type: PLAYER_HEAD
+        name: '&c&lNIVEL MÁXIMO'
+        lore:
+          - '&7Has alcanzado el nivel máximo'
+          - '&7de miembros permitidos!'
+        sound:
+          type: BLOCK_ANVIL_PLACE
+          volume: 0.2
+          pitch: 0.2
+  border-size:
+    item: '!'
+    '1':
+      has-next-level:
+        type: BARRIER
+        name: '&9&lTamaño del borde &a(Disponible)'
+        lore:
+          - '&7'
+          - '&9Next Level: &e2'
+          - '&7'
+          - '&7Comprar la mejora del borde'
+          - '&7aumentará el radio'
+          - '&7de tu isla.'
+          - '&7'
+          - '&9Radio: &f50 bloques'
+          - '&9Precio: &f$30,000'
+          - '&7'
+          - '&aClic para comprar la mejora.'
+        sound:
+          type: ENTITY_EXPERIENCE_ORB_PICKUP
+          volume: 0.2
+          pitch: 0.2
+      no-next-level:
+        type: BARRIER
+        name: '&9&lTamaño del borde &c(No disponible)'
+        lore:
+          - '&7'
+          - '&9Next Level: &e2'
+          - '&7'
+          - '&7Comprar la mejora del borde'
+          - '&7aumentará el radio'
+          - '&7de tu isla.'
+          - '&7'
+          - '&9Radio: &f50 bloques'
+          - '&9Precio: &f$30,000'
+          - '&7'
+          - '&aClic para comprar la mejora.'
+        sound:
+          type: BLOCK_ANVIL_PLACE
+          volume: 0.2
+          pitch: 0.2
+    '2':
+      has-next-level:
+        type: BARRIER
+        name: '&9&lTamaño del borde &a(Disponible)'
+        lore:
+          - '&7'
+          - '&9Next Level: &e3'
+          - '&7'
+          - '&7Comprar la mejora del borde'
+          - '&7aumentará el radio'
+          - '&7de tu isla.'
+          - '&7'
+          - '&9Radio: &f75 bloques'
+          - '&9Precio: &f$80,000'
+          - '&7'
+          - '&aClic para comprar la mejora.'
+        sound:
+          type: ENTITY_EXPERIENCE_ORB_PICKUP
+          volume: 0.2
+          pitch: 0.2
+      no-next-level:
+        type: BARRIER
+        name: '&9&lTamaño del borde &c(No disponible)'
+        lore:
+          - '&7'
+          - '&9Next Level: &e3'
+          - '&7'
+          - '&7Comprar la mejora del borde'
+          - '&7aumentará el radio'
+          - '&7de tu isla.'
+          - '&7'
+          - '&9Radio: &f75 bloques'
+          - '&9Precio: &f$80,000'
+          - '&7'
+          - '&aClic para comprar la mejora.'
+        sound:
+          type: BLOCK_ANVIL_PLACE
+          volume: 0.2
+          pitch: 0.2
+    '3':
+      has-next-level:
+        type: BARRIER
+        name: '&9&lTamaño del borde &a(Disponible)'
+        lore:
+          - '&7'
+          - '&9Next Level: &e4'
+          - '&7'
+          - '&7Comprar la mejora del borde'
+          - '&7aumentará el radio'
+          - '&7de tu isla.'
+          - '&7'
+          - '&9Radio: &f125 bloques'
+          - '&9Precio: &f$150,000'
+          - '&7'
+          - '&aClic para comprar la mejora.'
+        sound:
+          type: ENTITY_EXPERIENCE_ORB_PICKUP
+          volume: 0.2
+          pitch: 0.2
+      no-next-level:
+        type: BARRIER
+        name: '&9&lTamaño del borde &c(No disponible)'
+        lore:
+          - '&7'
+          - '&9Next Level: &e4'
+          - '&7'
+          - '&7Comprar la mejora del borde'
+          - '&7aumentará el radio'
+          - '&7de tu isla.'
+          - '&7'
+          - '&9Radio: &f125 bloques'
+          - '&9Precio: &f$150,000'
+          - '&7'
+          - '&aClic para comprar la mejora.'
+        sound:
+          type: BLOCK_ANVIL_PLACE
+          volume: 0.2
+          pitch: 0.2
+    '4':
+      has-next-level:
+        type: BARRIER
+        name: '&c&lNIVEL MÁXIMO'
+        lore:
+          - '&7Has alcanzado el nivel máximo'
+          - '&7del tamaño del borde!'
+        sound:
+          type: BLOCK_ANVIL_PLACE
+          volume: 0.2
+          pitch: 0.2
+      no-next-level:
+        type: BARRIER
+        name: '&c&lNIVEL MÁXIMO'
+        lore:
+          - '&7Has alcanzado el nivel máximo'
+          - '&7del tamaño del borde!'
+        sound:
+          type: BLOCK_ANVIL_PLACE
+          volume: 0.2
+          pitch: 0.2
+  generator-rates:
+    item: '+'
+    '1':
+      has-next-level:
+        type: COBBLESTONE
+        name: '&3&lVelocidad de generadores &a(Disponible)'
+        lore:
+          - '&7'
+          - '&3Next Level: &e2'
+          - '&7'
+          - '&7Comprar la mejora de generadores'
+          - '&7aumentará las tasas de minerales de los'
+          - '&7generadores de piedra de tu isla.'
+          - '&7'
+          - '&3Tasas:'
+          - ' &7 - &f92% Piedra'
+          - ' &7 - &f5% Mineral de carbón'
+          - ' &7 - &f3% Mineral de redstone'
+          - '&7'
+          - '&3Precio: &f$25,000'
+          - '&7'
+          - '&aClic para comprar la mejora.'
+        sound:
+          type: ENTITY_EXPERIENCE_ORB_PICKUP
+          volume: 0.2
+          pitch: 0.2
+      no-next-level:
+        type: COBBLESTONE
+        name: '&3&lVelocidad de generadores &c(No disponible)'
+        lore:
+          - '&7'
+          - '&3Next Level: &e2'
+          - '&7'
+          - '&7Comprar la mejora de generadores'
+          - '&7aumentará las tasas de minerales de los'
+          - '&7generadores de piedra de tu isla.'
+          - '&7'
+          - '&3Tasas:'
+          - ' &7 - &f92% Piedra'
+          - ' &7 - &f5% Mineral de carbón'
+          - ' &7 - &f3% Mineral de redstone'
+          - '&7'
+          - '&3Precio: &f$25,000'
+          - '&7'
+          - '&aClic para comprar la mejora.'
+        sound:
+          type: BLOCK_ANVIL_PLACE
+          volume: 0.2
+          pitch: 0.2
+    '2':
+      has-next-level:
+        type: COBBLESTONE
+        name: '&3&lVelocidad de generadores &a(Disponible)'
+        lore:
+          - '&7'
+          - '&3Next Level: &e3'
+          - '&7'
+          - '&7Comprar la mejora de generadores'
+          - '&7aumentará las tasas de minerales de los'
+          - '&7generadores de piedra de tu isla.'
+          - '&7'
+          - '&3Tasas:'
+          - ' &7 - &f80% Piedra'
+          - ' &7 - &f8% Mineral de carbón'
+          - ' &7 - &f6% Mineral de redstone'
+          - ' &7 - &f4% Mineral de lapislázuli'
+          - ' &7 - &f2% Mineral de hierro'
+          - '&7'
+          - '&3Precio: &f$75,000'
+          - '&7'
+          - '&aClic para comprar la mejora.'
+        sound:
+          type: ENTITY_EXPERIENCE_ORB_PICKUP
+          volume: 0.2
+          pitch: 0.2
+      no-next-level:
+        type: COBBLESTONE
+        name: '&3&lVelocidad de generadores &c(No disponible)'
+        lore:
+          - '&7'
+          - '&3Next Level: &e3'
+          - '&7'
+          - '&7Comprar la mejora de generadores'
+          - '&7aumentará las tasas de minerales de los'
+          - '&7generadores de piedra de tu isla.'
+          - '&7'
+          - '&3Tasas:'
+          - ' &7 - &f80% Piedra'
+          - ' &7 - &f8% Mineral de carbón'
+          - ' &7 - &f6% Mineral de redstone'
+          - ' &7 - &f4% Mineral de lapislázuli'
+          - ' &7 - &f2% Mineral de hierro'
+          - '&7'
+          - '&3Precio: &f$75,000'
+          - '&7'
+          - '&aClic para comprar la mejora.'
+        sound:
+          type: BLOCK_ANVIL_PLACE
+          volume: 0.2
+          pitch: 0.2
+    '3':
+      has-next-level:
+        type: COBBLESTONE
+        name: '&3&lVelocidad de generadores &a(Disponible)'
+        lore:
+          - '&7'
+          - '&3Next Level: &e4'
+          - '&7'
+          - '&7Comprar la mejora de generadores'
+          - '&7aumentará las tasas de minerales de los'
+          - '&7generadores de piedra de tu isla.'
+          - '&7'
+          - '&3Tasas:'
+          - ' &7 - &f65% Piedra'
+          - ' &7 - &f10% Mineral de carbón'
+          - ' &7 - &f9% Mineral de redstone'
+          - ' &7 - &f6% Mineral de lapislázuli'
+          - ' &7 - &f4% Mineral de hierro'
+          - ' &7 - &f3% Mineral de oro'
+          - ' &7 - &f2% Mineral de diamante'
+          - ' &7 - &f1% Mineral de esmeralda'
+          - '&7'
+          - '&3Precio: &f$150,000'
+          - '&7'
+          - '&aClic para comprar la mejora.'
+        sound:
+          type: ENTITY_EXPERIENCE_ORB_PICKUP
+          volume: 0.2
+          pitch: 0.2
+      no-next-level:
+        type: COBBLESTONE
+        name: '&3&lVelocidad de generadores &c(No disponible)'
+        lore:
+          - '&7'
+          - '&3Next Level: &e4'
+          - '&7'
+          - '&7Comprar la mejora de generadores'
+          - '&7aumentará las tasas de minerales de los'
+          - '&7generadores de piedra de tu isla.'
+          - '&7'
+          - '&3Tasas:'
+          - ' &7 - &f65% Piedra'
+          - ' &7 - &f10% Mineral de carbón'
+          - ' &7 - &f9% Mineral de redstone'
+          - ' &7 - &f6% Mineral de lapislázuli'
+          - ' &7 - &f4% Mineral de hierro'
+          - ' &7 - &f3% Mineral de oro'
+          - ' &7 - &f2% Mineral de diamante'
+          - ' &7 - &f1% Mineral de esmeralda'
+          - '&7'
+          - '&3Precio: &f$150,000'
+          - '&7'
+          - '&aClic para comprar la mejora.'
+        sound:
+          type: BLOCK_ANVIL_PLACE
+          volume: 0.2
+          pitch: 0.2
+    '4':
+      has-next-level:
+        type: COBBLESTONE
+        name: '&c&lNIVEL MÁXIMO'
+        lore:
+          - '&7Has alcanzado el nivel máximo'
+          - '&7de tasas de generadores!'
+        sound:
+          type: BLOCK_ANVIL_PLACE
+          volume: 0.2
+          pitch: 0.2
+      no-next-level:
+        type: COBBLESTONE
+        name: '&c&lNIVEL MÁXIMO'
+        lore:
+          - '&7Has alcanzado el nivel máximo'
+          - '&7de tasas de generadores!'
+        sound:
+          type: BLOCK_ANVIL_PLACE
+          volume: 0.2
+          pitch: 0.2
+  minecarts-limit:
+    item: '&'
+    '1':
+      has-next-level:
+        type: MINECART
+        name: '&d&lLímite de vagones &a(Disponible)'
+        lore:
+          - '&7'
+          - '&dNext Level: &e2'
+          - '&7'
+          - '&7Comprar la mejora de vagones'
+          - '&7aumentará el máximo''s'
+          - '&7de vagones de tu isla.'
+          - '&7'
+          - '&dCantidad: &f8x Vagones'
+          - '&dPrecio: &f$1,000,000'
+          - '&7'
+          - '&aClic para comprar la mejora.'
+        sound:
+          type: ENTITY_EXPERIENCE_ORB_PICKUP
+          volume: 0.2
+          pitch: 0.2
+      no-next-level:
+        type: MINECART
+        name: '&d&lLímite de tolvas &c(No disponible)'
+        lore:
+          - '&7'
+          - '&dNext Level: &e2'
+          - '&7'
+          - '&7Comprar la mejora de vagones'
+          - '&7aumentará el máximo''s'
+          - '&7de vagones de tu isla.'
+          - '&7'
+          - '&dCantidad: &f8x Vagones'
+          - '&dPrecio: &f$1,000,000'
+          - '&7'
+          - '&aClic para comprar la mejora.'
+        sound:
+          type: BLOCK_ANVIL_PLACE
+          volume: 0.2
+          pitch: 0.2
+    '2':
+      has-next-level:
+        type: MINECART
+        name: '&d&lLímite de tolvas &a(Disponible)'
+        lore:
+          - '&7'
+          - '&dNext Level: &e3'
+          - '&7'
+          - '&7Comprar la mejora de vagones'
+          - '&7aumentará el máximo''s'
+          - '&7de vagones de tu isla.'
+          - '&7'
+          - '&dCantidad: &f16x Vagones'
+          - '&dPrecio: &f$3,000,000'
+          - '&7'
+          - '&aClic para comprar la mejora.'
+        sound:
+          type: ENTITY_EXPERIENCE_ORB_PICKUP
+          volume: 0.2
+          pitch: 0.2
+      no-next-level:
+        type: MINECART
+        name: '&d&lLímite de tolvas &c(No disponible)'
+        lore:
+          - '&7'
+          - '&dNext Level: &e3'
+          - '&7'
+          - '&7Comprar la mejora de vagones'
+          - '&7aumentará el máximo''s'
+          - '&7de vagones de tu isla.'
+          - '&7'
+          - '&dCantidad: &f16x Vagones'
+          - '&dPrecio: &f$3,000,000'
+          - '&7'
+          - '&aClic para comprar la mejora.'
+        sound:
+          type: BLOCK_ANVIL_PLACE
+          volume: 0.2
+          pitch: 0.2
+    '3':
+      has-next-level:
+        type: MINECART
+        name: '&d&lLímite de tolvas &a(Disponible)'
+        lore:
+          - '&7'
+          - '&dNext Level: &e4'
+          - '&7'
+          - '&7Comprar la mejora de vagones'
+          - '&7aumentará el máximo''s'
+          - '&7de vagones de tu isla.'
+          - '&7'
+          - '&dCantidad: &f32x Vagones'
+          - '&dPrecio: &f$9,000,000'
+          - '&7'
+          - '&aClic para comprar la mejora.'
+        sound:
+          type: ENTITY_EXPERIENCE_ORB_PICKUP
+          volume: 0.2
+          pitch: 0.2
+      no-next-level:
+        type: MINECART
+        name: '&d&lLímite de tolvas &c(No disponible)'
+        lore:
+          - '&7'
+          - '&dNext Level: &e4'
+          - '&7'
+          - '&7Comprar la mejora de vagones'
+          - '&7aumentará el máximo''s'
+          - '&7de vagones de tu isla.'
+          - '&7'
+          - '&dCantidad: &f32x Vagones'
+          - '&dPrecio: &f$9,000,000'
+          - '&7'
+          - '&aClic para comprar la mejora.'
+        sound:
+          type: BLOCK_ANVIL_PLACE
+          volume: 0.2
+          pitch: 0.2
+    '4':
+      has-next-level:
+        type: MINECART
+        name: '&c&lNIVEL MÁXIMO'
+        lore:
+          - '&7Has alcanzado el nivel máximo'
+          - '&7de vagones permitidos!'
+        sound:
+          type: BLOCK_ANVIL_PLACE
+          volume: 0.2
+          pitch: 0.2
+      no-next-level:
+        type: MINECART
+        name: '&c&lNIVEL MÁXIMO'
+        lore:
+          - '&7Has alcanzado el nivel máximo'
+          - '&7de vagones permitidos!'
+        sound:
+          type: BLOCK_ANVIL_PLACE
+          volume: 0.2
+          pitch: 0.2

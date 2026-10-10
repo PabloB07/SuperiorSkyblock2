@@ -1,0 +1,144 @@
+﻿{
+    "generator":  {
+                      "biome_source":  {
+                                           "biomes":  [
+                                                          {
+                                                              "parameters":  {
+                                                                                 "weirdness":  [
+                                                                                                   -0.3,
+                                                                                                   0.3
+                                                                                               ],
+                                                                                 "depth":  [
+                                                                                               0,
+                                                                                               0
+                                                                                           ],
+                                                                                 "temperature":  [
+                                                                                                     0.2,
+                                                                                                     0.8
+                                                                                                 ],
+                                                                                 "humidity":  [
+                                                                                                  -0.2,
+                                                                                                  0.2
+                                                                                              ],
+                                                                                 "continentalness":  [
+                                                                                                         -0.2,
+                                                                                                         0.5
+                                                                                                     ],
+                                                                                 "erosion":  [
+                                                                                                 -0.5,
+                                                                                                 0.5
+                                                                                             ],
+                                                                                 "offset":  [
+                                                                                                0,
+                                                                                                0
+                                                                                            ]
+                                                                             },
+                                                              "biome":  "sift:pink_meadows"
+                                                          },
+                                                          {
+                                                              "parameters":  {
+                                                                                 "weirdness":  [
+                                                                                                   -0.3,
+                                                                                                   0.3
+                                                                                               ],
+                                                                                 "depth":  [
+                                                                                               0,
+                                                                                               0
+                                                                                           ],
+                                                                                 "temperature":  [
+                                                                                                     -0.8,
+                                                                                                     -0.2
+                                                                                                 ],
+                                                                                 "humidity":  [
+                                                                                                  0,
+                                                                                                  0.6
+                                                                                              ],
+                                                                                 "continentalness":  [
+                                                                                                         -0.2,
+                                                                                                         0.6
+                                                                                                     ],
+                                                                                 "erosion":  [
+                                                                                                 -0.5,
+                                                                                                 0.5
+                                                                                             ],
+                                                                                 "offset":  [
+                                                                                                0,
+                                                                                                0
+                                                                                            ]
+                                                                             },
+                                                              "biome":  "sift:frost_forest"
+                                                          },
+                                                          {
+                                                              "parameters":  {
+                                                                                 "weirdness":  [
+                                                                                                   -0.3,
+                                                                                                   0.3
+                                                                                               ],
+                                                                                 "depth":  [
+                                                                                               0,
+                                                                                               0
+                                                                                           ],
+                                                                                 "temperature":  [
+                                                                                                     0.6,
+                                                                                                     1
+                                                                                                 ],
+                                                                                 "humidity":  [
+                                                                                                  -0.6,
+                                                                                                  -0.1
+                                                                                              ],
+                                                                                 "continentalness":  [
+                                                                                                         0,
+                                                                                                         1
+                                                                                                     ],
+                                                                                 "erosion":  [
+                                                                                                 -1,
+                                                                                                 -0.3
+                                                                                             ],
+                                                                                 "offset":  [
+                                                                                                0,
+                                                                                                0
+                                                                                            ]
+                                                                             },
+                                                              "biome":  "sift:red_spires"
+                                                          },
+                                                          {
+                                                              "parameters":  {
+                                                                                 "weirdness":  [
+                                                                                                   -0.3,
+                                                                                                   0.3
+                                                                                               ],
+                                                                                 "depth":  [
+                                                                                               0,
+                                                                                               0
+                                                                                           ],
+                                                                                 "temperature":  [
+                                                                                                     -0.3,
+                                                                                                     0.3
+                                                                                                 ],
+                                                                                 "humidity":  [
+                                                                                                  -0.3,
+                                                                                                  0.3
+                                                                                              ],
+                                                                                 "continentalness":  [
+                                                                                                         0.4,
+                                                                                                         1
+                                                                                                     ],
+                                                                                 "erosion":  [
+                                                                                                 -1,
+                                                                                                 -0.5
+                                                                                             ],
+                                                                                 "offset":  [
+                                                                                                0,
+                                                                                                0
+                                                                                            ]
+                                                                             },
+                                                              "biome":  "sift:shattered_peaks"
+                                                          }
+                                                      ],
+                                           "type":  "minecraft:multi_noise"
+                                       },
+                      "type":  "minecraft:noise",
+                      "settings":  "minecraft:overworld"
+                  },
+    "type":  "sift:sift"
+}

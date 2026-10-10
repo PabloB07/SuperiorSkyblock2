@@ -409,6 +409,25 @@ worlds:
         # The format is '<offset-x>, <offset-y>, <offset-z>' (may be negative).
         # Having the offset going beyond the island-radius is an undefined behavior!
         portal-offset: '0, 0, 0'
+    # The Sift dimension: a custom world with its own biomes, loaded from a datapack.
+    # Its world is created as "sift" when enabled.
+    sift:
+      # Should the Sift world be enabled? Restart the server after changing it.
+      enabled: false
+      # Should the Sift be unlocked by default to islands?
+      unlock: true
+      # Custom name for the Sift world (not used yet, the world is always "sift").
+      name: ''
+      # Should the schematics in this world will not be counted towards worth and level values?
+      schematic-offset: false
+      # The environment of this world
+      environment: NORMAL
+      # The default biome for the world (Sift biomes are set by the datapack).
+      biome: PLAINS
+      # Configure the portal agents
+      portals:
+        NETHER: nether
+        ENDER: the_end
 
 # All settings related to the spawn island.
 spawn:
@@ -784,6 +803,11 @@ default-disband-count: 5
 # The default language to be used.
 # This should be the same as your language file's name.
 default-language: 'en-US'
+
+# The default language for the menu files inside the menus folder.
+# When set to es-ES, the bundled Spanish menu translations are used for new menu files.
+# Set to any other value to keep them in English.
+menus-language: 'es-ES'
 
 # Should world borders be enabled by default for new players?
 default-world-border: true

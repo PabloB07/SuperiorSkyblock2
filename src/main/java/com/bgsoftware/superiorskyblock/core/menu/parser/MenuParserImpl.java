@@ -180,8 +180,15 @@ public class MenuParserImpl implements MenuParser {
     @Nullable
     private static CommentedConfiguration loadMenuFile(File file, String fileName, boolean customMenu,
                                                        @Nullable IMenuConverter converter) {
-        if (!file.exists() && !customMenu)
-            Resources.saveResource("menus/" + fileName);
+        if (!file.exists() && !customMenu) {
+            String spanishResource = "menus/es-ES/" + fileName;
+            if ("es-ES".equalsIgnoreCase(plugin.getSettings().getMenusLanguage()) &&
+                    plugin.getResource(spanishResource) != null) {
+                Resources.saveResource("menus/" + fileName, spanishResource);
+            } else {
+                Resources.saveResource("menus/" + fileName);
+            }
+        }
 
         CommentedConfiguration cfg = new CommentedConfiguration();
 

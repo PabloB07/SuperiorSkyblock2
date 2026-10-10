@@ -1,0 +1,58 @@
+######################################################
+##                                                  ##
+##                SuperiorSkyblock 2                ##
+##                Developed by Ome_R                ##
+##                                                  ##
+######################################################
+
+title: '&lWarp: {0}'
+previous-menu: true
+
+pattern:
+  - '@ @ @ @ @ @ @ @ @'
+  - '@ @ ! @ % @ $ @ @'
+  - '@ @ @ @ ~ @ @ @ @'
+  - '@ @ @ @ @ @ @ @ @'
+
+success-update-sound:
+  type: ENTITY_EXPERIENCE_ORB_PICKUP
+  volume: 0.2
+  pitch: 0.2
+
+warp-rename: '!'
+warp-icon: '~'
+warp-location: '$'
+warp-private: '%'
+
+items:
+  '!':
+    type: BOOK
+    name: '&6Renombrar warp'
+    lore:
+      - '&f '
+      - '&f '
+      - '&7&o(( &f&oClic &7&opara renombrar el warp. ))'
+  '~':
+    type: STONE
+    lore:
+      - '&f '
+      - '&f '
+      - '&7&oPuedes usar los siguientes placeholders:'
+      - '&7&o{0} para el nombre del warp.'
+      - '&7&o{1} para la ubicación del warp.'
+      - '&7&o{2} para el estado público del warp.'
+      - '&7&o(( &f&oClic &7&opara editar el icono. ))'
+  '$':
+    type: ENDER_PEARL
+    name: '&6Ubicación del warp'
+    lore:
+      - '&f '
+      - '&f '
+      - '&7&o(( &f&oClic &7&opara actualizar la ubicación del warp. ))'
+  '%':
+    type: FEATHER
+    name: '&6Warp privado'
+    lore:
+      - '&f '
+      - '&f '
+      - '&7&o(( &f&oClic &7&opara alternar el warp a público. ))'

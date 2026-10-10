@@ -1,0 +1,23 @@
+﻿{
+    "infiniburn":  "#minecraft:infiniburn_overworld",
+    "piglin_safe":  false,
+    "coordinate_scale":  1,
+    "natural":  true,
+    "min_y":  -64,
+    "has_raids":  true,
+    "has_skylight":  true,
+    "ultrawarm":  false,
+    "logical_height":  384,
+    "monster_spawn_light_level":  {
+                                      "min_inclusive":  0,
+                                      "type":  "minecraft:uniform",
+                                      "max_inclusive":  7
+                                  },
+    "height":  384,
+    "ambient_light":  0.1,
+    "respawn_anchor_works":  false,
+    "effects":  "minecraft:overworld",
+    "bed_works":  true,
+    "monster_spawn_block_light_limit":  0,
+    "has_ceiling":  false
+}

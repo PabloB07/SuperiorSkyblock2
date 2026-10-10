@@ -2,6 +2,7 @@ package com.bgsoftware.superiorskyblock.core.menu.button.impl;
 
 import com.bgsoftware.common.annotations.Nullable;
 import com.bgsoftware.superiorskyblock.api.menu.MenuIslandCreationConfig;
+import com.bgsoftware.superiorskyblock.world.sift.SiftIslands;
 import com.bgsoftware.superiorskyblock.api.menu.button.MenuTemplateButton;
 import com.bgsoftware.superiorskyblock.api.menu.button.click.ButtonClickContext;
 import com.bgsoftware.superiorskyblock.api.menu.dialog.DialogButton;
@@ -48,6 +49,8 @@ public class IslandCreationButton extends AbstractMenuViewButton<MenuIslandCreat
     @Override
     public void onButtonClick(ButtonClickContext<MenuIslandCreation.View> context) {
         SuperiorPlayer clickedPlayer = plugin.getPlayers().getSuperiorPlayer(context.getPlayer());
+        if (getTemplate().siftDimension)
+            SiftIslands.mark(clickedPlayer.getUniqueId());
         MenuActions.simulateIslandCreationClick(clickedPlayer, menuView.getIslandName(),
                 getTemplate().getCreationConfig(),
                 context.getClickType().isRightClick(), menuView);
@@ -71,9 +74,14 @@ public class IslandCreationButton extends AbstractMenuViewButton<MenuIslandCreat
         private BigDecimal bonusLevel;
         private boolean isOffset;
         private BlockOffset spawnOffset = null;
+        private boolean siftDimension;
 
         public Builder(Schematic schematic) {
             this.schematic = schematic;
+        }
+
+        public void setSiftDimension(boolean siftDimension) {
+            this.siftDimension = siftDimension;
         }
 
         public void setAccessItem(TemplateItem accessItem) {
@@ -136,8 +144,10 @@ public class IslandCreationButton extends AbstractMenuViewButton<MenuIslandCreat
             this.clickSound = null;
             this.commands = null;
             try {
-                return new Template(this, accessSound, accessCommands, noAccessItem, noAccessCommands, biome,
+                Template template = new Template(this, accessSound, accessCommands, noAccessItem, noAccessCommands, biome,
                         bonusWorth, bonusLevel, isOffset, spawnOffset, schematic);
+                template.siftDimension = siftDimension;
+                return template;
             } finally {
                 this.clickSound = accessSound;
                 this.commands = accessCommands;
@@ -163,6 +173,7 @@ public class IslandCreationButton extends AbstractMenuViewButton<MenuIslandCreat
         private final BlockOffset spawnOffset;
 
         private final MenuIslandCreationConfig creationConfig;
+        private boolean siftDimension;
 
         Template(AbstractBuilder<MenuIslandCreation.View> builder,
                  @Nullable GameSound accessSound, @Nullable List<String> accessCommands,

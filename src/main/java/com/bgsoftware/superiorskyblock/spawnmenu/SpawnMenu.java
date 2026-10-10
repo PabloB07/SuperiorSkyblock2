@@ -6,6 +6,7 @@ import com.bgsoftware.superiorskyblock.api.island.PlayerRole;
 import com.bgsoftware.superiorskyblock.api.wrappers.SuperiorPlayer;
 import com.bgsoftware.superiorskyblock.core.EnumHelper;
 import com.bgsoftware.superiorskyblock.core.formatting.Formatters;
+import com.bgsoftware.superiorskyblock.core.logging.Log;
 import com.bgsoftware.superiorskyblock.core.messages.Message;
 import com.bgsoftware.superiorskyblock.island.IslandUtils;
 import com.bgsoftware.superiorskyblock.island.top.SortingTypes;
@@ -25,8 +26,12 @@ import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.persistence.PersistentDataContainer;
 import org.bukkit.persistence.PersistentDataType;
 
+import java.io.File;
+import java.io.InputStream;
 import java.lang.reflect.Method;
 import java.math.BigDecimal;
+import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -40,6 +45,18 @@ public class SpawnMenu {
     static final int SLOT_PROFILE = 13;
     static final int SLOT_CREATE = 15;
     static final int SLOT_LANGUAGE = 22;
+
+    // Menu files whose bundled Spanish translations get applied when the language flag is clicked.
+    private static final String[] SPANISH_MENUS = {
+            "bank-logs.yml", "banned-players.yml", "biomes.yml", "border-color.yml", "confirm-ban.yml",
+            "confirm-disband.yml", "confirm-kick.yml", "confirm-leave.yml", "confirm-transfer.yml",
+            "control-panel.yml", "coops.yml", "counts.yml", "global-warps.yml", "island-bank.yml",
+            "island-chest.yml", "island-creation.yml", "island-rate.yml", "island-ratings.yml",
+            "member-manage.yml", "member-role.yml", "members.yml", "missions.yml", "missions-category.yml",
+            "permissions.yml", "player-language.yml", "settings.yml", "top-islands.yml", "unique-visitors.yml",
+            "upgrades.yml", "values.yml", "visitors.yml", "warp-categories.yml", "warp-category-icon-edit.yml",
+            "warp-category-manage.yml", "warp-icon-edit.yml", "warp-manage.yml", "warps.yml"
+    };
 
     // The main sourceSet compiles against the 1.8 API, where ItemMeta doesn't
     // have PersistentDataContainers. The getter is resolved through reflection instead.
@@ -121,6 +138,7 @@ public class SpawnMenu {
             case SLOT_LANGUAGE:
                 superiorPlayer.setUserLocale(PlayerLocales.getLocale("es-ES"));
                 player.closeInventory();
+                translateMenusToSpanish();
                 Message.SPAWN_LANGUAGE_CHANGED.send(superiorPlayer);
                 break;
             default:
@@ -148,6 +166,31 @@ public class SpawnMenu {
         lore.add(text(Message.SPAWN_MENU_PROFILE_WORTH.getMessage(locale) + format(island.getWorth())));
         lore.add(text(Message.SPAWN_MENU_PROFILE_MEMBERS.getMessage(locale) + members));
         return lore;
+    }
+
+    private void translateMenusToSpanish() {
+        File menusFolder = new File(plugin.getDataFolder(), "menus");
+        //noinspection ResultOfMethodCallIgnored
+        menusFolder.mkdirs();
+
+        int translated = 0;
+
+        for (String fileName : SPANISH_MENUS) {
+            try (InputStream resource = plugin.getResource("menus/es-ES/" + fileName)) {
+                if (resource == null)
+                    continue;
+
+                Files.copy(resource, new File(menusFolder, fileName).toPath(), StandardCopyOption.REPLACE_EXISTING);
+                translated++;
+            } catch (Exception error) {
+                Log.error(error, "An unexpected error occurred while translating menu ", fileName, ":");
+            }
+        }
+
+        if (translated > 0) {
+            Log.info("Translated " + translated + " menu files to Spanish.");
+            plugin.getMenus().loadData();
+        }
     }
 
     private void markItem(ItemMeta meta) {

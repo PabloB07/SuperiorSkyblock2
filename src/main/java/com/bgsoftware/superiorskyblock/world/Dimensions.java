@@ -27,6 +27,15 @@ public class Dimensions {
     }
 
     @Nullable
+    public static Dimension findByName(String name) {
+        for (Dimension dimension : Dimension.values()) {
+            if (dimension.getName().equalsIgnoreCase(name))
+                return dimension;
+        }
+        return null;
+    }
+
+    @Nullable
     public static Dimension fromEnvironment(World.Environment environment) {
         return ENVIRONMENT_TO_DIMENSION.get(environment);
     }

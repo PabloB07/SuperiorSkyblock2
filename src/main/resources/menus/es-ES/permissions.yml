@@ -1,0 +1,2645 @@
+######################################################
+##                                                  ##
+##                SuperiorSkyblock 2                ##
+##                Developed by Ome_R                ##
+##                                                  ##
+######################################################
+
+title: '&lPermisos de la isla'
+previous-menu: true
+
+pattern:
+  - '$ $ $ $ $ $ $ $ $'
+  - '$ @ @ @ @ @ @ @ $'
+  - '$ @ @ @ @ @ @ @ $'
+  - '$ @ @ @ @ @ @ @ $'
+  - '$ $ % $ * $ ^ $ $'
+
+slots: '@'
+previous-page: '%'
+current-page: '*'
+next-page: '^'
+
+messages:
+  no-role-permission: '&8 - &c{}'
+  exact-role-permission: '&8 - &2{}'
+  higher-role-permission: '&8 - &a{}'
+
+items:
+  '$':
+    type: CYAN_STAINED_GLASS_PANE
+    name: '&f'
+  '%':
+    type: PAPER
+    name: '{0}Página anterior'
+  '*':
+    type: SUNFLOWER
+    name: '&aPágina actual'
+    lore:
+      - '&7Página {0}'
+  '^':
+    type: PAPER
+    name: '{0}Página siguiente'
+
+permissions:
+  all:
+    display-menu: true
+    permission-enabled:
+      type: BEDROCK
+      name: '&6Todos'
+      lore:
+        - '&7Acceso a todas las funciones de la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: BEDROCK
+      name: '&6Todos'
+      lore:
+        - '&7Acceso a todas las funciones de la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: BEDROCK
+      name: '&6Todos'
+      lore:
+        - '&7Acceso a todas las funciones de la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  allay_interact:
+    display-menu: true
+    permission-enabled:
+      type: ALLAY_SPAWN_EGG
+      name: '&6Interactuar con allays'
+      lore:
+        - '&7Acceso a interactuar con allays en la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: ALLAY_SPAWN_EGG
+      name: '&6Interactuar con allays'
+      lore:
+        - '&7Acceso a interactuar con allays en la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: ALLAY_SPAWN_EGG
+      name: '&6Interactuar con allays'
+      lore:
+        - '&7Acceso a interactuar con allays en la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  animal_breed:
+    display-menu: true
+    permission-enabled:
+      type: WHEAT
+      name: '&6Cría de animales'
+      lore:
+        - '&7Acceso a criar animales en la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      name: '&6Cría de animales'
+      type: WHEAT
+      lore:
+        - '&7Acceso a criar animales en la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      name: '&6Cría de animales'
+      type: WHEAT
+      lore:
+        - '&7Acceso a criar animales en la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  animal_damage:
+    display-menu: true
+    permission-enabled:
+      type: DIAMOND_SWORD
+      name: '&6Dañar animales'
+      lore:
+        - '&7Acceso a dañar animales en la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+      flags:
+        - HIDE_ATTRIBUTES
+    permission-disabled:
+      type: DIAMOND_SWORD
+      name: '&6Dañar animales'
+      lore:
+        - '&7Acceso a dañar animales en la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+      flags:
+        - HIDE_ATTRIBUTES
+    role-permission:
+      type: DIAMOND_SWORD
+      name: '&6Dañar animales'
+      lore:
+        - '&7Acceso a dañar animales en la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+      flags:
+        - HIDE_ATTRIBUTES
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  animal_shear:
+    display-menu: true
+    permission-enabled:
+      type: SHEARS
+      name: '&6Esquilar animales'
+      lore:
+        - '&7Acceso a esquilar animales en la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: SHEARS
+      name: '&6Esquilar animales'
+      lore:
+        - '&7Acceso a esquilar animales en la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: SHEARS
+      name: '&6Esquilar animales'
+      lore:
+        - '&7Acceso a esquilar animales en la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  animal_spawn:
+    display-menu: true
+    permission-enabled:
+      type: CHICKEN_SPAWN_EGG
+      name: '&6Invocar animales'
+      lore:
+        - '&7Acceso a invocar animales en la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: CHICKEN_SPAWN_EGG
+      name: '&6Invocar animales'
+      lore:
+        - '&7Acceso a invocar animales en la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: CHICKEN_SPAWN_EGG
+      name: '&6Invocar animales'
+      lore:
+        - '&7Acceso a invocar animales en la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  ban_member:
+    display-menu: true
+    permission-enabled:
+      type: SKELETON_SKULL
+      name: '&6Banear miembros'
+      lore:
+        - '&7Acceso a banear miembros de la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: SKELETON_SKULL
+      name: '&6Banear miembros'
+      lore:
+        - '&7Acceso a banear miembros de la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: SKELETON_SKULL
+      name: '&6Banear miembros'
+      lore:
+        - '&7Acceso a banear miembros de la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  break:
+    display-menu: true
+    permission-enabled:
+      type: DIAMOND_PICKAXE
+      name: '&6Romper bloques'
+      lore:
+        - '&7Acceso a romper bloques en la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+      flags:
+        - HIDE_ATTRIBUTES
+    permission-disabled:
+      type: DIAMOND_PICKAXE
+      name: '&6Romper bloques'
+      lore:
+        - '&7Acceso a romper bloques en la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+      flags:
+        - HIDE_ATTRIBUTES
+    role-permission:
+      type: DIAMOND_PICKAXE
+      name: '&6Romper bloques'
+      lore:
+        - '&7Acceso a romper bloques en la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+      flags:
+        - HIDE_ATTRIBUTES
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  brush:
+    display-menu: true
+    permission-enabled:
+      type: BRUSH
+      name: '&6Cepillar'
+      lore:
+        - '&7Acceso a cepillar bloques sospechosos en la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: BRUSH
+      name: '&6Cepillar'
+      lore:
+        - '&7Acceso a cepillar bloques sospechosos en la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: BRUSH
+      name: '&6Cepillar'
+      lore:
+        - '&7Acceso a cepillar bloques sospechosos en la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  build:
+    display-menu: true
+    permission-enabled:
+      type: COBBLESTONE
+      name: '&6Construir'
+      lore:
+        - '&7Acceso a colocar bloques en la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: COBBLESTONE
+      name: '&6Construir'
+      lore:
+        - '&7Acceso a colocar bloques en la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: COBBLESTONE
+      name: '&6Construir'
+      lore:
+        - '&7Acceso a colocar bloques en la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  change_name:
+    display-menu: true
+    permission-enabled:
+      type: NAME_TAG
+      name: '&6Cambiar nombre'
+      lore:
+        - '&7Acceso a cambiar el nombre de la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: NAME_TAG
+      name: '&6Cambiar nombre'
+      lore:
+        - '&7Acceso a cambiar el nombre de la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: NAME_TAG
+      name: '&6Cambiar nombre'
+      lore:
+        - '&7Acceso a cambiar el nombre de la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  chest_access:
+    display-menu: true
+    permission-enabled:
+      type: CHEST
+      name: '&6Acceso a cofres'
+      lore:
+        - '&7Acceso a abrir cofres en la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: CHEST
+      name: '&6Acceso a cofres'
+      lore:
+        - '&7Acceso a abrir cofres en la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: CHEST
+      name: '&6Acceso a cofres'
+      lore:
+        - '&7Acceso a abrir cofres en la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  chorus_fruit:
+    display-menu: true
+    permission-enabled:
+      type: CHORUS_FRUIT
+      name: '&6Fruta chorus'
+      lore:
+        - '&7Acceso a comer frutas chorus en la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: CHORUS_FRUIT
+      name: '&6Fruta chorus'
+      lore:
+        - '&7Acceso a comer frutas chorus en la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: CHORUS_FRUIT
+      name: '&6Fruta chorus'
+      lore:
+        - '&7Acceso a comer frutas chorus en la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  close_bypass:
+    display-menu: true
+    permission-enabled:
+      type: TRIPWIRE_HOOK
+      name: '&6Ignorar bloqueo'
+      lore:
+        - '&7Acceso a ignorar el bloqueo de la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: TRIPWIRE_HOOK
+      name: '&6Ignorar bloqueo'
+      lore:
+        - '&7Acceso a ignorar el bloqueo de la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: TRIPWIRE_HOOK
+      name: '&6Ignorar bloqueo'
+      lore:
+        - '&7Acceso a ignorar el bloqueo de la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  close_island:
+    display-menu: true
+    permission-enabled:
+      type: BARRIER
+      name: '&6Cerrar isla'
+      lore:
+        - '&7Acceso a cerrar la isla al público.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: BARRIER
+      name: '&6Cerrar isla'
+      lore:
+        - '&7Acceso a cerrar la isla al público.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: BARRIER
+      name: '&6Cerrar isla'
+      lore:
+        - '&7Acceso a cerrar la isla al público.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  coop_member:
+    display-menu: true
+    permission-enabled:
+      type: GOLDEN_APPLE
+      name: '&6Añadir coop'
+      lore:
+        - '&7Acceso a añadir un jugador como coop.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: GOLDEN_APPLE
+      name: '&6Añadir coop'
+      lore:
+        - '&7Acceso a añadir un jugador como coop.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: GOLDEN_APPLE
+      name: '&6Añadir coop'
+      lore:
+        - '&7Acceso a añadir un jugador como coop.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  copper_golem_interact:
+    display-menu: true
+    permission-enabled:
+      type: COPPER_GOLEM_STATUE
+      name: '&6Interactuar con gólem de cobre'
+      lore:
+        - '&7Acceso a quitar objetos de los gólems de cobre.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: COPPER_GOLEM_STATUE
+      name: '&6Interactuar con gólem de cobre'
+      lore:
+        - '&7Acceso a quitar objetos de los gólems de cobre.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: COPPER_GOLEM_STATUE
+      name: '&6Interactuar con gólem de cobre'
+      lore:
+        - '&7Acceso a quitar objetos de los gólems de cobre.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  delete_warp:
+    display-menu: true
+    permission-enabled:
+      type: ENDER_PEARL
+      name: '&6Eliminar warps'
+      lore:
+        - '&7Acceso a eliminar warps de la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: ENDER_PEARL
+      name: '&6Eliminar warps'
+      lore:
+        - '&7Acceso a eliminar warps de la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: ENDER_PEARL
+      name: '&6Eliminar warps'
+      lore:
+        - '&7Acceso a eliminar warps de la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  demote_members:
+    display-menu: true
+    permission-enabled:
+      type: IRON_INGOT
+      name: '&6Degradar miembros'
+      lore:
+        - '&7Acceso a degradar miembros de la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: IRON_INGOT
+      name: '&6Degradar miembros'
+      lore:
+        - '&7Acceso a degradar miembros de la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: IRON_INGOT
+      name: '&6Degradar miembros'
+      lore:
+        - '&7Acceso a degradar miembros de la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  deposit_money:
+    display-menu: true
+    permission-enabled:
+      type: MAP
+      name: '&6Depositar dinero'
+      lore:
+        - '&7Acceso a depositar dinero en el banco de la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: MAP
+      name: '&6Depositar dinero'
+      lore:
+        - '&7Acceso a depositar dinero en el banco de la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: MAP
+      name: '&6Depositar dinero'
+      lore:
+        - '&7Acceso a depositar dinero en el banco de la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  disband_island:
+    display-menu: true
+    permission-enabled:
+      type: TNT
+      name: '&6Eliminar isla'
+      lore:
+        - '&7Acceso a eliminar la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: TNT
+      name: '&6Eliminar isla'
+      lore:
+        - '&7Acceso a eliminar la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: TNT
+      name: '&6Eliminar isla'
+      lore:
+        - '&7Acceso a eliminar la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  discord_show:
+    display-menu: true
+    permission-enabled:
+      type: LIGHT_BLUE_TERRACOTTA
+      name: '&6Ver Discord'
+      lore:
+        - '&7Acceso a ver el Discord vinculado de la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: LIGHT_BLUE_TERRACOTTA
+      name: '&6Ver Discord'
+      lore:
+        - '&7Acceso a ver el Discord vinculado de la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: LIGHT_BLUE_TERRACOTTA
+      name: '&6Ver Discord'
+      lore:
+        - '&7Acceso a ver el Discord vinculado de la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  drop_items:
+    display-menu: true
+    permission-enabled:
+      type: ARROW
+      name: '&6Soltar objetos'
+      lore:
+        - '&7Acceso a soltar objetos en la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: ARROW
+      name: '&6Soltar objetos'
+      lore:
+        - '&7Acceso a soltar objetos en la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: ARROW
+      name: '&6Soltar objetos'
+      lore:
+        - '&7Acceso a soltar objetos en la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  dye_sheep:
+    display-menu: true
+    permission-enabled:
+      type: SHEEP_SPAWN_EGG
+      name: '&6Teñir ovejas'
+      lore:
+        - '&7Acceso a teñir ovejas en la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: SHEEP_SPAWN_EGG
+      name: '&6Teñir ovejas'
+      lore:
+        - '&7Acceso a teñir ovejas en la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: SHEEP_SPAWN_EGG
+      name: '&6Teñir ovejas'
+      lore:
+        - '&7Acceso a teñir ovejas en la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  ender_pearl:
+    display-menu: true
+    permission-enabled:
+      type: ENDER_PEARL
+      name: '&6Perla de ender'
+      lore:
+        - '&7Acceso a usar perlas de ender en la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: ENDER_PEARL
+      name: '&6Perla de ender'
+      lore:
+        - '&7Acceso a usar perlas de ender en la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: ENDER_PEARL
+      name: '&6Perla de ender'
+      lore:
+        - '&7Acceso a usar perlas de ender en la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  entity_ride:
+    display-menu: true
+    permission-enabled:
+      type: SADDLE
+      name: '&6Montar entidades'
+      lore:
+        - '&7Acceso a montar entidades en la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: SADDLE
+      name: '&6Montar entidades'
+      lore:
+        - '&7Acceso a montar entidades en la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: SADDLE
+      name: '&6Montar entidades'
+      lore:
+        - '&7Acceso a montar entidades en la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  expel_bypass:
+    display-menu: true
+    permission-enabled:
+      type: FEATHER
+      name: '&6Ignorar expulsión'
+      lore:
+        - '&7Acceso a ignorar las expulsiones.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: FEATHER
+      name: '&6Ignorar expulsión'
+      lore:
+        - '&7Acceso a ignorar las expulsiones.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: FEATHER
+      name: '&6Ignorar expulsión'
+      lore:
+        - '&7Acceso a ignorar las expulsiones.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  expel_players:
+    display-menu: true
+    permission-enabled:
+      type: DISPENSER
+      name: '&6Expulsar jugadores'
+      lore:
+        - '&7Acceso a expulsar jugadores de la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: DISPENSER
+      name: '&6Expulsar jugadores'
+      lore:
+        - '&7Acceso a expulsar jugadores de la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: DISPENSER
+      name: '&6Expulsar jugadores'
+      lore:
+        - '&7Acceso a expulsar jugadores de la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  farm_tramping:
+    display-menu: true
+    permission-enabled:
+      type: FARMLAND
+      name: '&6Pisotear cultivos'
+      lore:
+        - '&7Acceso a pisotear tierras de cultivo en la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: FARMLAND
+      name: '&6Pisotear cultivos'
+      lore:
+        - '&7Acceso a pisotear tierras de cultivo en la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: FARMLAND
+      name: '&6Pisotear cultivos'
+      lore:
+        - '&7Acceso a pisotear tierras de cultivo en la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  fertilize:
+    display-menu: true
+    permission-enabled:
+      type: BONE_MEAL
+      name: '&6Fertilizar'
+      lore:
+        - '&7Acceso a fertilizar bloques en la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: BONE_MEAL
+      name: '&6Fertilizar'
+      lore:
+        - '&7Acceso a fertilizar bloques en la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: BONE_MEAL
+      name: '&6Fertilizar'
+      lore:
+        - '&7Acceso a fertilizar bloques en la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  fish:
+    display-menu: true
+    permission-enabled:
+      type: FISHING_ROD
+      name: '&6Pescar'
+      lore:
+        - '&7Acceso a pescar en la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: FISHING_ROD
+      name: '&6Pescar'
+      lore:
+        - '&7Acceso a pescar en la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: FISHING_ROD
+      name: '&6Pescar'
+      lore:
+        - '&7Acceso a pescar en la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  fly:
+    display-menu: true
+    permission-enabled:
+      type: FEATHER
+      name: '&6Volar'
+      lore:
+        - '&7Acceso a volar en la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: FEATHER
+      name: '&6Volar'
+      lore:
+        - '&7Acceso a volar en la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: FEATHER
+      name: '&6Volar'
+      lore:
+        - '&7Acceso a volar en la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  horse_interact:
+    display-menu: true
+    permission-enabled:
+      type: HORSE_SPAWN_EGG
+      name: '&6Interactuar con caballos'
+      lore:
+        - '&7Acceso a interactuar con caballos en la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: HORSE_SPAWN_EGG
+      name: '&6Interactuar con caballos'
+      lore:
+        - '&7Acceso a interactuar con caballos en la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: HORSE_SPAWN_EGG
+      name: '&6Interactuar con caballos'
+      lore:
+        - '&7Acceso a interactuar con caballos en la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  ignite_creeper:
+    display-menu: true
+    permission-enabled:
+      type: CREEPER_SPAWN_EGG
+      name: '&6Encender creepers'
+      lore:
+        - '&7Acceso a encender creepers con mechero en la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: CREEPER_SPAWN_EGG
+      name: '&6Encender creepers'
+      lore:
+        - '&7Acceso a encender creepers con mechero en la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: CREEPER_SPAWN_EGG
+      name: '&6Encender creepers'
+      lore:
+        - '&7Acceso a encender creepers con mechero en la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  interact:
+    display-menu: true
+    permission-enabled:
+      type: PISTON
+      name: '&6Interactuar'
+      lore:
+        - '&7Acceso a interactuar con bloques en la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: PISTON
+      name: '&6Interactuar'
+      lore:
+        - '&7Acceso a interactuar con bloques en la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: PISTON
+      name: '&6Interactuar'
+      lore:
+        - '&7Acceso a interactuar con bloques en la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  invite_member:
+    display-menu: true
+    permission-enabled:
+      type: PLAYER_HEAD
+      data: 3
+      name: '&6Invitar miembros'
+      lore:
+        - '&7Acceso a invitar nuevos miembros a la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: PLAYER_HEAD
+      name: '&6Invitar miembros'
+      lore:
+        - '&7Acceso a invitar nuevos miembros a la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: PLAYER_HEAD
+      name: '&6Invitar miembros'
+      lore:
+        - '&7Acceso a invitar nuevos miembros a la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  island_chest:
+    display-menu: true
+    permission-enabled:
+      type: ENDER_CHEST
+      name: '&6Cofre comunitario'
+      lore:
+        - '&7Acceso al cofre comunitario de la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: ENDER_CHEST
+      name: '&6Cofre comunitario'
+      lore:
+        - '&7Acceso al cofre comunitario de la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: ENDER_CHEST
+      name: '&6Cofre comunitario'
+      lore:
+        - '&7Acceso al cofre comunitario de la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  item_frame:
+    display-menu: true
+    permission-enabled:
+      type: ITEM_FRAME
+      name: '&6Marco'
+      lore:
+        - '&7Acceso a interactuar con marcos en la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: ITEM_FRAME
+      name: '&6Marco'
+      lore:
+        - '&7Acceso a interactuar con marcos en la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: ITEM_FRAME
+      name: '&6Marco'
+      lore:
+        - '&7Acceso a interactuar con marcos en la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  kick_member:
+    display-menu: true
+    permission-enabled:
+      type: SKELETON_SKULL
+      name: '&6Expulsar miembros'
+      lore:
+        - '&7Acceso a expulsar miembros de la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: SKELETON_SKULL
+      name: '&6Expulsar miembros'
+      lore:
+        - '&7Acceso a expulsar miembros de la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: SKELETON_SKULL
+      name: '&6Expulsar miembros'
+      lore:
+        - '&7Acceso a expulsar miembros de la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  leash:
+    display-menu: true
+    permission-enabled:
+      type: LEAD
+      name: '&6Atar mobs'
+      lore:
+        - '&7Acceso a atar mobs en la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: LEAD
+      name: '&6Atar mobs'
+      lore:
+        - '&7Acceso a atar mobs en la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: LEAD
+      name: '&6Atar mobs'
+      lore:
+        - '&7Acceso a atar mobs en la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  minecart_damage:
+    display-menu: true
+    permission-enabled:
+      type: TNT_MINECART
+      name: '&6Dañar vagones'
+      lore:
+        - '&7Acceso a dañar vagones en la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: TNT_MINECART
+      name: '&6Dañar vagones'
+      lore:
+        - '&7Acceso a dañar vagones en la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: TNT_MINECART
+      name: '&6Dañar vagones'
+      lore:
+        - '&7Acceso a dañar vagones en la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  minecart_enter:
+    display-menu: true
+    permission-enabled:
+      type: HOPPER_MINECART
+      name: '&6Entrar en vagones'
+      lore:
+        - '&7Acceso a entrar en vagones en la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: HOPPER_MINECART
+      name: '&6Entrar en vagones'
+      lore:
+        - '&7Acceso a entrar en vagones en la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: HOPPER_MINECART
+      name: '&6Entrar en vagones'
+      lore:
+        - '&7Acceso a entrar en vagones en la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  minecart_open:
+    display-menu: true
+    permission-enabled:
+      type: CHEST_MINECART
+      name: '&6Abrir vagones'
+      lore:
+        - '&7Acceso a abrir vagones en la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: CHEST_MINECART
+      name: '&6Abrir vagones'
+      lore:
+        - '&7Acceso a abrir vagones en la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: CHEST_MINECART
+      name: '&6Abrir vagones'
+      lore:
+        - '&7Acceso a abrir vagones en la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  minecart_place:
+    display-menu: true
+    permission-enabled:
+      type: MINECART
+      name: '&6Colocar vagones'
+      lore:
+        - '&7Acceso a colocar vagones en la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: MINECART
+      name: '&6Colocar vagones'
+      lore:
+        - '&7Acceso a colocar vagones en la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: MINECART
+      name: '&6Colocar vagones'
+      lore:
+        - '&7Acceso a colocar vagones en la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  monster_damage:
+    display-menu: true
+    permission-enabled:
+      type: ZOMBIE_HEAD
+      name: '&6Dañar monstruos'
+      lore:
+        - '&7Acceso a dañar monstruos en la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: ZOMBIE_HEAD
+      name: '&6Dañar monstruos'
+      lore:
+        - '&7Acceso a dañar monstruos en la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: ZOMBIE_HEAD
+      name: '&6Dañar monstruos'
+      lore:
+        - '&7Acceso a dañar monstruos en la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  monster_spawn:
+    display-menu: true
+    permission-enabled:
+      type: CAVE_SPIDER_SPAWN_EGG
+      name: '&6Invocar monstruos'
+      lore:
+        - '&7Acceso a invocar monstruos en la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: CAVE_SPIDER_SPAWN_EGG
+      name: '&6Invocar monstruos'
+      lore:
+        - '&7Acceso a invocar monstruos en la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: CAVE_SPIDER_SPAWN_EGG
+      name: '&6Invocar monstruos'
+      lore:
+        - '&7Acceso a invocar monstruos en la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  nautilus_interact:
+    display-menu: true
+    permission-enabled:
+      type: NAUTILUS_SHELL
+      name: '&6Interactuar con nautilos'
+      lore:
+        - '&7Acceso a interactuar con nautilos en la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: NAUTILUS_SHELL
+      name: '&6Interactuar con nautilos'
+      lore:
+        - '&7Acceso a interactuar con nautilos en la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: NAUTILUS_SHELL
+      name: '&6Interactuar con nautilos'
+      lore:
+        - '&7Acceso a interactuar con nautilos en la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  name_entity:
+    display-menu: true
+    permission-enabled:
+      type: NAME_TAG
+      name: '&6Nombrar entidades'
+      lore:
+        - '&7Acceso a nombrar entidades en la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: NAME_TAG
+      name: '&6Nombrar entidades'
+      lore:
+        - '&7Acceso a nombrar entidades en la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: NAME_TAG
+      name: '&6Nombrar entidades'
+      lore:
+        - '&7Acceso a nombrar entidades en la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  open_island:
+    display-menu: true
+    permission-enabled:
+      type: REDSTONE_TORCH
+      name: '&6Abrir isla al público'
+      lore:
+        - '&7Acceso a abrir la isla al público.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: REDSTONE_TORCH
+      name: '&6Abrir isla al público'
+      lore:
+        - '&7Acceso a abrir la isla al público.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: REDSTONE_TORCH
+      name: '&6Abrir isla al público'
+      lore:
+        - '&7Acceso a abrir la isla al público.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  painting:
+    display-menu: true
+    permission-enabled:
+      type: PAINTING
+      name: '&6Cuadros'
+      lore:
+        - '&7Acceso a interactuar con cuadros en la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: PAINTING
+      name: '&6Cuadros'
+      lore:
+        - '&7Acceso a interactuar con cuadros en la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: PAINTING
+      name: '&6Cuadros'
+      lore:
+        - '&7Acceso a interactuar con cuadros en la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  paypal_show:
+    display-menu: true
+    permission-enabled:
+      type: BLUE_WOOL
+      name: '&6Ver PayPal'
+      lore:
+        - '&7Acceso a ver el PayPal vinculado de la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: BLUE_WOOL
+      name: '&6Ver PayPal'
+      lore:
+        - '&7Acceso a ver el PayPal vinculado de la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: BLUE_WOOL
+      name: '&6Ver PayPal'
+      lore:
+        - '&7Acceso a ver el PayPal vinculado de la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  pickup_axolotl:
+    display-menu: true
+    permission-enabled:
+      type: AXOLOTL_SPAWN_EGG
+      name: '&6Recoger ajolotes'
+      lore:
+        - '&7Acceso a recoger ajolotes con un cubo en la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: AXOLOTL_SPAWN_EGG
+      name: '&6Recoger ajolotes'
+      lore:
+        - '&7Acceso a recoger ajolotes con un cubo en la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: AXOLOTL_SPAWN_EGG
+      name: '&6Recoger ajolotes'
+      lore:
+        - '&7Acceso a recoger ajolotes con un cubo en la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  pickup_drops:
+    display-menu: true
+    permission-enabled:
+      type: HOPPER
+      name: '&6Recoger objetos'
+      lore:
+        - '&7Acceso a recoger objetos en la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: HOPPER
+      name: '&6Recoger objetos'
+      lore:
+        - '&7Acceso a recoger objetos en la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: HOPPER
+      name: '&6Recoger objetos'
+      lore:
+        - '&7Acceso a recoger objetos en la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  pickup_fish:
+    display-menu: true
+    permission-enabled:
+      type: COD
+      name: '&6Recoger peces'
+      lore:
+        - '&7Acceso a recoger peces con cubos en la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: COD
+      name: '&6Recoger peces'
+      lore:
+        - '&7Acceso a recoger peces con cubos en la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: COD
+      name: '&6Recoger peces'
+      lore:
+        - '&7Acceso a recoger peces con cubos en la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  pickup_lectern_book:
+    display-menu: true
+    permission-enabled:
+      type: LECTERN
+      name: '&6Recoger libro del atril'
+      lore:
+        - '&7Acceso a recoger libros de atriles en la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: LECTERN
+      name: '&6Recoger libro del atril'
+      lore:
+        - '&7Acceso a recoger libros de atriles en la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: LECTERN
+      name: '&6Recoger libro del atril'
+      lore:
+        - '&7Acceso a recoger libros de atriles en la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  promote_members:
+    display-menu: true
+    permission-enabled:
+      type: DIAMOND
+      name: '&6Ascender miembros'
+      lore:
+        - '&7Acceso a ascender miembros en la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: DIAMOND
+      name: '&6Ascender miembros'
+      lore:
+        - '&7Acceso a ascender miembros en la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: DIAMOND
+      name: '&6Ascender miembros'
+      lore:
+        - '&7Acceso a ascender miembros en la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  rankup:
+    display-menu: true
+    permission-enabled:
+      type: GOLD_INGOT
+      name: '&6Mejorar isla'
+      lore:
+        - '&7Acceso a mejorar las estadísticas de la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: GOLD_INGOT
+      name: '&6Mejorar isla'
+      lore:
+        - '&7Acceso a mejorar las estadísticas de la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: GOLD_INGOT
+      name: '&6Mejorar isla'
+      lore:
+        - '&7Acceso a mejorar las estadísticas de la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  ratings_show:
+    display-menu: true
+    permission-enabled:
+      type: NETHER_STAR
+      name: '&6Ver calificaciones'
+      lore:
+        - '&7Acceso a ver las calificaciones de la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: NETHER_STAR
+      name: '&6Ver calificaciones'
+      lore:
+        - '&7Acceso a ver las calificaciones de la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: NETHER_STAR
+      name: '&6Ver calificaciones'
+      lore:
+        - '&7Acceso a ver las calificaciones de la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  saddle_entity:
+    display-menu: true
+    permission-enabled:
+      type: SADDLE
+      name: '&6Poner silla'
+      lore:
+        - '&7Acceso a poner sillas a entidades en la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: SADDLE
+      name: '&6Poner silla'
+      lore:
+        - '&7Acceso a poner sillas a entidades en la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: SADDLE
+      name: '&6Poner silla'
+      lore:
+        - '&7Acceso a poner sillas a entidades en la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  sculk_sensor:
+    display-menu: true
+    permission-enabled:
+      type: SCULK_SENSOR
+      name: '&6Sensor sculk'
+      lore:
+        - '&7Acceso a activar sensores sculk en la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: SCULK_SENSOR
+      name: '&6Sensor sculk'
+      lore:
+        - '&7Acceso a activar sensores sculk en la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: SCULK_SENSOR
+      name: '&6Sensor sculk'
+      lore:
+        - '&7Acceso a activar sensores sculk en la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  set_biome:
+    display-menu: true
+    permission-enabled:
+      type: GRASS_BLOCK
+      name: '&6Cambiar bioma'
+      lore:
+        - '&7Acceso a cambiar el bioma de la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: GRASS_BLOCK
+      name: '&6Cambiar bioma'
+      lore:
+        - '&7Acceso a cambiar el bioma de la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: GRASS_BLOCK
+      name: '&6Cambiar bioma'
+      lore:
+        - '&7Acceso a cambiar el bioma de la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  set_discord:
+    display-menu: true
+    permission-enabled:
+      type: LIGHT_BLUE_TERRACOTTA
+      name: '&6Cambiar Discord'
+      lore:
+        - '&7Acceso a cambiar el Discord vinculado a la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: LIGHT_BLUE_TERRACOTTA
+      name: '&6Cambiar Discord'
+      lore:
+        - '&7Acceso a cambiar el Discord vinculado a la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: LIGHT_BLUE_TERRACOTTA
+      name: '&6Cambiar Discord'
+      lore:
+        - '&7Acceso a cambiar el Discord vinculado a la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  set_home:
+    display-menu: true
+    permission-enabled:
+      type: RED_BED
+      name: '&6Cambiar hogar'
+      lore:
+        - '&7Acceso a cambiar el punto de aparición de la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: RED_BED
+      name: '&6Cambiar hogar'
+      lore:
+        - '&7Acceso a cambiar el punto de aparición de la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: RED_BED
+      name: '&6Cambiar hogar'
+      lore:
+        - '&7Acceso a cambiar el punto de aparición de la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  set_paypal:
+    display-menu: true
+    permission-enabled:
+      type: BLUE_WOOL
+      name: '&6Cambiar PayPal'
+      lore:
+        - '&7Acceso a cambiar el PayPal vinculado a la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: BLUE_WOOL
+      name: '&6Cambiar PayPal'
+      lore:
+        - '&7Acceso a cambiar el PayPal vinculado a la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: BLUE_WOOL
+      name: '&6Cambiar PayPal'
+      lore:
+        - '&7Acceso a cambiar el PayPal vinculado a la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  set_permission:
+    display-menu: true
+    permission-enabled:
+      type: REPEATER
+      name: '&6Cambiar permisos'
+      lore:
+        - '&7Acceso a cambiar permisos de los miembros.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: REPEATER
+      name: '&6Cambiar permisos'
+      lore:
+        - '&7Acceso a cambiar permisos de los miembros.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: REPEATER
+      name: '&6Cambiar permisos'
+      lore:
+        - '&7Acceso a cambiar permisos de los miembros.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  set_role:
+    display-menu: true
+    permission-enabled:
+      type: DIAMOND_CHESTPLATE
+      name: '&6Cambiar rol'
+      lore:
+        - '&7Acceso a cambiar roles de los miembros.'
+        - '&7Actualmente &aACTIVADO&7.'
+      flags:
+        - HIDE_ATTRIBUTES
+    permission-disabled:
+      type: DIAMOND_CHESTPLATE
+      name: '&6Cambiar rol'
+      lore:
+        - '&7Acceso a cambiar roles de los miembros.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+      flags:
+        - HIDE_ATTRIBUTES
+    role-permission:
+      type: DIAMOND_CHESTPLATE
+      name: '&6Cambiar rol'
+      lore:
+        - '&7Acceso a cambiar roles de los miembros.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+      flags:
+        - HIDE_ATTRIBUTES
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  set_settings:
+    display-menu: true
+    permission-enabled:
+      type: LEVER
+      name: '&6Cambiar ajustes'
+      lore:
+        - '&7Acceso a cambiar los ajustes de la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: LEVER
+      name: '&6Cambiar ajustes'
+      lore:
+        - '&7Acceso a cambiar los ajustes de la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: LEVER
+      name: '&6Cambiar ajustes'
+      lore:
+        - '&7Acceso a cambiar los ajustes de la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  set_warp:
+    display-menu: true
+    permission-enabled:
+      type: ENDER_EYE
+      name: '&6Crear warps'
+      lore:
+        - '&7Acceso a crear nuevos warps en la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: ENDER_EYE
+      name: '&6Crear warps'
+      lore:
+        - '&7Acceso a crear nuevos warps en la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: ENDER_EYE
+      name: '&6Crear warps'
+      lore:
+        - '&7Acceso a crear nuevos warps en la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  sign_interact:
+    display-menu: true
+    permission-enabled:
+      type: OAK_SIGN
+      name: '&6Interactuar con carteles'
+      lore:
+        - '&7Acceso a interactuar con carteles en la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: OAK_SIGN
+      name: '&6Interactuar con carteles'
+      lore:
+        - '&7Acceso a interactuar con carteles en la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: OAK_SIGN
+      name: '&6Interactuar con carteles'
+      lore:
+        - '&7Acceso a interactuar con carteles en la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  spawner_break:
+    display-menu: true
+    permission-enabled:
+      type: SPAWNER
+      name: '&6Romper generadores'
+      lore:
+        - '&7Acceso a romper generadores en la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+      flags:
+        - HIDE_ADDITIONAL_TOOLTIP
+    permission-disabled:
+      type: SPAWNER
+      name: '&6Romper generadores'
+      lore:
+        - '&7Acceso a romper generadores en la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+      flags:
+        - HIDE_ADDITIONAL_TOOLTIP
+    role-permission:
+      type: SPAWNER
+      name: '&6Romper generadores'
+      lore:
+        - '&7Acceso a romper generadores en la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+      flags:
+        - HIDE_ADDITIONAL_TOOLTIP
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  turtle_egg_tramping:
+    display-menu: true
+    permission-enabled:
+      type: TURTLE_EGG
+      name: '&6Pisotear huevos de tortuga'
+      lore:
+        - '&7Acceso a pisotear huevos de tortuga en la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: TURTLE_EGG
+      name: '&6Pisotear huevos de tortuga'
+      lore:
+        - '&7Acceso a pisotear huevos de tortuga en la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: TURTLE_EGG
+      name: '&6Pisotear huevos de tortuga'
+      lore:
+        - '&7Acceso a pisotear huevos de tortuga en la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  tamed_animal_damage:
+    display-menu: true
+    permission-enabled:
+      type: BONE
+      name: '&6Dañar animales domados'
+      lore:
+        - '&7Acceso a dañar animales domados en la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: BONE
+      name: '&6Dañar animales domados'
+      lore:
+        - '&7Acceso a dañar animales domados en la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: BONE
+      name: '&6Dañar animales domados'
+      lore:
+        - '&7Acceso a dañar animales domados en la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: ANVIL_LAND
+        volume: 0.2
+        pitch: 0.2
+
+  uncoop_member:
+    display-menu: true
+    permission-enabled:
+      type: GOLDEN_APPLE
+      name: '&6Quitar coop'
+      lore:
+        - '&7Acceso a quitar miembros coop de la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: GOLDEN_APPLE
+      name: '&6Quitar coop'
+      lore:
+        - '&7Acceso a quitar miembros coop de la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: GOLDEN_APPLE
+      name: '&6Quitar coop'
+      lore:
+        - '&7Acceso a quitar miembros coop de la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  use:
+    display-menu: true
+    permission-enabled:
+      type: STONE_BUTTON
+      name: '&6Usar'
+      lore:
+        - '&7Acceso a usar distintos bloques en la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: STONE_BUTTON
+      name: '&6Usar'
+      lore:
+        - '&7Acceso a usar distintos bloques en la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: STONE_BUTTON
+      name: '&6Usar'
+      lore:
+        - '&7Acceso a usar distintos bloques en la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  valuable_break:
+    display-menu: true
+    permission-enabled:
+      type: GOLD_INGOT
+      name: '&6Romper bloques valiosos'
+      lore:
+        - '&7Acceso a romper bloques valiosos en la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: GOLD_INGOT
+      name: '&6Romper bloques valiosos'
+      lore:
+        - '&7Acceso a romper bloques valiosos en la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: GOLD_INGOT
+      name: '&6Romper bloques valiosos'
+      lore:
+        - '&7Acceso a romper bloques valiosos en la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  villager_trading:
+    display-menu: true
+    permission-enabled:
+      type: PLAYER_HEAD
+      skull: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDFiODMwZWI0MDgyYWNlYzgzNmJjODM1ZTQwYTExMjgyYmI1MTE5MzMxNWY5MTE4NDMzN2U4ZDM1NTU1ODMifX19'
+      name: '&6Comerciar con aldeanos'
+      lore:
+        - '&7Acceso a comerciar con aldeanos en la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: PLAYER_HEAD
+      skull: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDFiODMwZWI0MDgyYWNlYzgzNmJjODM1ZTQwYTExMjgyYmI1MTE5MzMxNWY5MTE4NDMzN2U4ZDM1NTU1ODMifX19'
+      name: '&6Comerciar con aldeanos'
+      lore:
+        - '&7Acceso a comerciar con aldeanos en la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: PLAYER_HEAD
+      skull: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDFiODMwZWI0MDgyYWNlYzgzNmJjODM1ZTQwYTExMjgyYmI1MTE5MzMxNWY5MTE4NDMzN2U4ZDM1NTU1ODMifX19'
+      name: '&6Comerciar con aldeanos'
+      lore:
+        - '&7Acceso a comerciar con aldeanos en la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  wind_charge:
+    display-menu: true
+    permission-enabled:
+      type: WIND_CHARGE
+      name: '&6Carga de viento'
+      lore:
+        - '&7Acceso a usar cargas de viento en la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: WIND_CHARGE
+      name: '&6Carga de viento'
+      lore:
+        - '&7Acceso a usar cargas de viento en la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: WIND_CHARGE
+      name: '&6Carga de viento'
+      lore:
+        - '&7Acceso a usar cargas de viento en la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2
+
+  withdraw_money:
+    display-menu: true
+    permission-enabled:
+      type: EMERALD
+      name: '&6Retirar dinero'
+      lore:
+        - '&7Acceso a retirar dinero del banco de la isla.'
+        - '&7Actualmente &aACTIVADO&7.'
+    permission-disabled:
+      type: EMERALD
+      name: '&6Retirar dinero'
+      lore:
+        - '&7Acceso a retirar dinero del banco de la isla.'
+        - '&7Actualmente &cDESACTIVADO&7.'
+    role-permission:
+      type: EMERALD
+      name: '&6Retirar dinero'
+      lore:
+        - '&7Acceso a retirar dinero del banco de la isla.'
+        - '&7Rol: &e{}&7.'
+        - ''
+        - '{0}'
+    has-access:
+      sound:
+        type: ENTITY_EXPERIENCE_ORB_PICKUP
+        volume: 0.2
+        pitch: 0.2
+    no-access:
+      sound:
+        type: BLOCK_ANVIL_PLACE
+        volume: 0.2
+        pitch: 0.2

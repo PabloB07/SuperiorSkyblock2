@@ -1,0 +1,63 @@
+######################################################
+##                                                  ##
+##                SuperiorSkyblock 2                ##
+##                Developed by Ome_R                ##
+##                                                  ##
+######################################################
+
+title: '&lRegistro de transacciones &r{0}'
+previous-menu: true
+
+pattern:
+  - '@ @ @ @ @ @ @ @ @'
+  - '@ @ @ @ @ @ @ @ @'
+  - '@ @ @ @ @ @ @ @ @'
+  - '@ @ @ @ @ @ @ @ @'
+  - '$ $ $ ! $ - $ $ $'
+  - '# # % # * # ^ # #'
+
+slots: '@'
+previous-page: '%'
+current-page: '*'
+next-page: '^'
+
+time-sort: '!'
+money-sort: '-'
+
+items:
+  '@':
+    type: PAPER
+    name: '&eTransacción #{0}'
+    lore:
+      - '&7Jugador: {1}'
+      - '&7Estado: {2}'
+      - '&7Hora: {3}'
+      - '&7Cantidad: ${4}'
+      - ''
+      - '&7Haz clic para filtrar las transacciones de este jugador.'
+  '%':
+    type: PAPER
+    name: '{0}Página anterior'
+  '*':
+    type: SUNFLOWER
+    name: '&aPágina actual'
+    lore:
+      - '&7Página {0}'
+  '^':
+    type: PAPER
+    name: '{0}Página siguiente'
+  '$':
+    type: BLACK_STAINED_GLASS_PANE
+    name: '&f'
+  '!':
+    type: CLOCK
+    name: '&6Ordenar por fecha'
+  '-':
+    type: EMERALD
+    name: '&6Ordenar por dinero'
+
+sounds:
+  '@':
+    type: BLOCK_CHEST_OPEN
+    volume: 0.8
+    pitch: 1

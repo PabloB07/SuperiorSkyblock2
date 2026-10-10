@@ -1,0 +1,48 @@
+######################################################
+##                                                  ##
+##                SuperiorSkyblock 2                ##
+##                Developed by Ome_R                ##
+##                                                  ##
+######################################################
+
+title: '&lCategorías de warps'
+previous-menu: true
+
+pattern:
+  - '@ @ @ @ @ @ @ @ @'
+  - '@ @ @ @ @ @ @ @ @'
+  - '@ @ @ @ @ @ @ @ @'
+  - '@ @ @ @ @ @ @ @ @'
+  - '$ $ $ $ $ $ $ $ $'
+  - '# # % # * # ^ # #'
+
+slots: '@'
+previous-page: '%'
+current-page: '*'
+next-page: '^'
+
+# This lore is added to category icons.
+edit-lore:
+  - '&f '
+  - '&f '
+  - '&7&o(( &f&oClic izquierdo &7&opara ver los warps de la isla. ))'
+  - '&7&o(( &f&oClic derecho &7&opara editar la categoría. ))'
+
+items:
+  '@':
+    type: BLACK_STAINED_GLASS_PANE
+    name: '&f'
+  '%':
+    type: PAPER
+    name: '&cPágina anterior'
+  '*':
+    type: SUNFLOWER
+    name: '&aPágina actual'
+    lore:
+      - '&7Página 1'
+  '^':
+    type: PAPER
+    name: '&cPágina siguiente'
+  '$':
+    type: BLACK_STAINED_GLASS_PANE
+    name: '&f'

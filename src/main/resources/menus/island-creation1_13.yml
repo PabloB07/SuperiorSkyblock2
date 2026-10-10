@@ -9,7 +9,7 @@ title: '&lCreate a new island...'
 previous-menu: true
 
 pattern:
-  - '~ ~ ~ ~ ~ ~ ~ ~ ~'
+  - '~ ~ ~ ~ & ~ ~ ~ ~'
   - '# @ # # ^ # # $ #'
   - '~ ~ ~ ~ ~ ~ ~ ~ ~'
 
@@ -74,6 +74,25 @@ items:
         - '&7Customized island with lots of sand!'
         - '&7 '
         - '&7&o(( &f&oRight-Click &7&oto preview the island. ))'
+  '&':
+    schematic: 'normal'
+    biome: PLAINS
+    spawn-offset: '0, 0, 0'
+    sift: true
+    access:
+      type: AMETHYST_BLOCK
+      name: '&dIsla Sift &a(Available)'
+      lore:
+        - '&7Isla en la dimensión Sift, con sus biomas propios.'
+        - '&7 '
+        - '&7&o(( &f&oClic &7&opara crear tu isla Sift. ))'
+    no-access:
+      type: AMETHYST_BLOCK
+      name: '&dIsla Sift &c(Unavailable)'
+      lore:
+        - '&7Isla en la dimensión Sift, con sus biomas propios.'
+        - '&7 '
+        - '&7&o(( &f&oClic &7&opara crear tu isla Sift. ))'
   '~':
     type: BLACK_STAINED_GLASS_PANE
     name: '&f'

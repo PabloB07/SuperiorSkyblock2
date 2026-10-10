@@ -143,6 +143,10 @@ public class GlobalSection extends SettingsContainerHolder {
         return getContainer().teleportOnJoin;
     }
 
+    public String getMenusLanguage() {
+        return getContainer().menusLanguage;
+    }
+
     public boolean isTeleportOnKick() {
         return getContainer().teleportOnKick;
     }

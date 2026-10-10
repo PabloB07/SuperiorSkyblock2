@@ -1,0 +1,123 @@
+######################################################
+##                                                  ##
+##                SuperiorSkyblock 2                ##
+##                Developed by Ome_R                ##
+##                                                  ##
+######################################################
+
+title: '&lTop islas'
+previous-menu: true
+
+pattern:
+  - '@ @ @ @ @ @ @ @ @'
+  - '@ @ @ @ @ # @ @ @'
+  - '@ $ @ @ # # # @ @'
+  - '@ @ @ # # # # # @'
+  - '~ ~ ~ ~ % ~ ~ ~ ~'
+  - '@ @ ! @ - @ + @ @'
+
+slots: '#'
+previous-page: '!'
+current-page: '-'
+next-page: '+'
+
+player-island: '$'
+sort-islands: '%'
+
+messages:
+  selected-sorting-type: '&8 - &a{0}'
+  unselected-sorting-type: '&8 - &7{0}'
+
+items:
+  '#':
+    island:
+      type: PLAYER_HEAD
+      name: '&e&l[!] Isla: &6&n{0}&7 (#{1})'
+      lore:
+        - '&7'
+        - '&6&l* &e&lPuesto &7#{1}'
+        - '&7'
+        - '&6&l* &e&lNivel: &7{2}'
+        - '&6&l* &e&lValor &7${3}'
+        - '&6&l* &e&lCalificación {8} &7({9})'
+        - '&6&l* &e&lJugadores &7{10}'
+        - '&6&l* &e&lBanco &7${11}'
+        - '&7'
+        - '&6&l* &e&lMiembros:'
+        - '{4}:&f  - &7{}'
+        - '&7'
+        - '&7&o(( &f&oClic izquierdo &7&opara ver sus objetos. ))'
+        - '&7&o(( &f&oClic derecho &7&opara ir al warp de la isla. ))'
+    no-island:
+      type: PLAYER_HEAD
+      name: '&cIsla no válida'
+  '%':
+    WORTH:
+      display-name: 'Valor'
+      type: DIAMOND
+      name: '&6Cambiar tipo de orden'
+      lore:
+        - '&7Cambia el orden del top de islas.'
+        - '&7Ordenar por: &e{1}&7.'
+        - ''
+        - '{0}'
+    LEVEL:
+      display-name: 'Nivel'
+      type: GOLD_INGOT
+      name: '&6Cambiar tipo de orden'
+      lore:
+        - '&7Cambia el orden del top de islas.'
+        - '&7Ordenar por: &e{1}&7.'
+        - ''
+        - '{0}'
+    RATING:
+      display-name: 'Calificación'
+      type: NETHER_STAR
+      name: '&6Cambiar tipo de orden'
+      lore:
+        - '&7Cambia el orden del top de islas.'
+        - '&7Ordenar por: &e{1}&7.'
+        - ''
+        - '{0}'
+    PLAYERS:
+      display-name: 'Jugadores'
+      type: PLAYER_HEAD
+      name: '&6Cambiar tipo de orden'
+      lore:
+        - '&7Cambia el orden del top de islas.'
+        - '&7Ordenar por: &e{1}&7.'
+        - ''
+        - '{0}'
+    BANK:
+      display-name: 'Banco'
+      type: EMERALD
+      name: '&6Cambiar tipo de orden'
+      lore:
+        - '&7Cambia el orden del top de islas.'
+        - '&7Ordenar por: &e{1}&7.'
+        - ''
+        - '{0}'
+  '!':
+    type: PAPER
+    name: '{0}Página anterior'
+  '-':
+    type: SUNFLOWER
+    name: '&aPágina actual'
+    lore:
+      - '&7Página {0}'
+  '+':
+    type: PAPER
+    name: '{0}Página siguiente'
+  '~':
+    type: BLACK_STAINED_GLASS_PANE
+    name: '&f'
+
+sounds:
+  '@':
+    type: ENTITY_EXPERIENCE_ORB_PICKUP
+    volume: 0.2
+    pitch: 0.2
+  '%':
+    type: ENTITY_EXPERIENCE_ORB_PICKUP
+    volume: 0.2
+    pitch: 0.2
