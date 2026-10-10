@@ -309,6 +309,7 @@ public enum Message {
     COMMAND_DESCRIPTION_SET_TELEPORT,
     COMMAND_DESCRIPTION_SET_WARP,
     COMMAND_DESCRIPTION_SHOW,
+    COMMAND_DESCRIPTION_SPAWN,
     COMMAND_DESCRIPTION_TEAM,
     COMMAND_DESCRIPTION_TEAM_CHAT,
     COMMAND_DESCRIPTION_TELEPORT,
@@ -908,6 +909,8 @@ public enum Message {
             } catch (Exception error) {
                 Log.error(error, "An unexpected error occurred while saving lang file ", langFile.getName(), ":");
             }
+
+            plugin.getScoreboards().loadLocale(fileLocale, cfg);
 
             for (Message locale : values()) {
                 if (!locale.isCustom()) {

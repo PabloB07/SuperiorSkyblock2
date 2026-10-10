@@ -10,6 +10,7 @@ import com.bgsoftware.superiorskyblock.api.player.respawn.RespawnAction;
 import com.bgsoftware.superiorskyblock.api.service.region.MoveResult;
 import com.bgsoftware.superiorskyblock.api.service.region.RegionManagerService;
 import com.bgsoftware.superiorskyblock.api.wrappers.SuperiorPlayer;
+import com.bgsoftware.superiorskyblock.api.world.Dimension;
 import com.bgsoftware.superiorskyblock.core.LazyReference;
 import com.bgsoftware.superiorskyblock.core.Materials;
 import com.bgsoftware.superiorskyblock.core.ObjectsPools;
@@ -38,7 +39,9 @@ import com.bgsoftware.superiorskyblock.player.respawn.RespawnActions;
 import com.bgsoftware.superiorskyblock.world.BukkitEntities;
 import org.bukkit.GameMode;
 import org.bukkit.Location;
+import org.bukkit.Material;
 import org.bukkit.block.Block;
+import org.bukkit.block.BlockFace;
 import org.bukkit.entity.Arrow;
 import org.bukkit.entity.Player;
 import org.bukkit.event.block.Action;
@@ -48,6 +51,7 @@ import org.bukkit.inventory.InventoryHolder;
 import org.bukkit.inventory.InventoryView;
 import org.bukkit.inventory.ItemStack;
 
+import java.math.BigDecimal;
 import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
@@ -111,6 +115,8 @@ public class PlayersListener extends AbstractGameEventListener {
     private void onPlayerJoin(GameEvent<GameEventArgs.PlayerJoinEvent> e) {
         Player player = e.getArgs().player;
 
+        boolean firstJoin = !player.hasPlayedBefore();
+
         SuperiorPlayer superiorPlayer = plugin.getPlayers().getSuperiorPlayer(player);
 
         if (superiorPlayer instanceof SuperiorNPCPlayer) {
@@ -152,7 +158,9 @@ public class PlayersListener extends AbstractGameEventListener {
             if (!plugin.getProviders().notifySkinsListeners(superiorPlayer))
                 plugin.getNMSPlayers().setSkinTexture(superiorPlayer);
 
-            if (!superiorPlayer.hasBypassModeEnabled()) {
+            if (firstJoin && !superiorPlayer.hasBypassModeEnabled()) {
+                superiorPlayer.teleport(plugin.getGrid().getSpawnIsland());
+            } else if (!superiorPlayer.hasBypassModeEnabled()) {
                 Island delayedIsland;
                 try (ObjectsPools.Wrapper<Location> wrapper = ObjectsPools.LOCATION.obtain()) {
                     delayedIsland = plugin.getGrid().getIslandAt(player.getLocation(wrapper.getHandle()));
@@ -273,6 +281,43 @@ public class PlayersListener extends AbstractGameEventListener {
                 e.setCancelled();
                 break;
         }
+
+        if (!e.isCancelled())
+            handleSpawnPortal(superiorPlayer, player, e.getArgs().to);
+    }
+
+    private void handleSpawnPortal(SuperiorPlayer superiorPlayer, Player player, Location location) {
+        Material portalBlock = plugin.getSettings().getSpawnPortalBlock();
+        if (portalBlock == null || !player.isOnGround())
+            return;
+
+        if (location.getBlock().getRelative(BlockFace.DOWN).getType() != portalBlock)
+            return;
+
+        Island spawnIsland = plugin.getGrid().getIslandAt(location);
+        if (spawnIsland == null || !spawnIsland.isSpawn())
+            return;
+
+        Island island = superiorPlayer.getIsland();
+        if (island != null) {
+            superiorPlayer.teleport(island);
+            return;
+        }
+
+        if (plugin.getGrid().hasActiveCreateRequest(superiorPlayer))
+            return;
+
+        Dimension dimension = plugin.getSettings().getWorlds().getDefaultWorldDimension();
+        String schematicName = plugin.getSchematics().getDefaultSchematic(dimension);
+        if (schematicName.isEmpty())
+            schematicName = dimension.getName().toLowerCase(Locale.ENGLISH);
+
+        if (plugin.getSchematics().getSchematic(schematicName) == null)
+            return;
+
+        plugin.getGrid().createIsland(superiorPlayer, schematicName,
+                BigDecimal.ZERO, IslandUtils.getDefaultWorldBiome(dimension), superiorPlayer.getName());
+        Message.ISLAND_CREATE_PROCCESS_REQUEST.send(superiorPlayer);
     }
 
     private void onPlayerTeleport(GameEvent<GameEventArgs.EntityTeleportEvent> e) {

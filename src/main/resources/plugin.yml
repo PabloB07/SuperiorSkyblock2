@@ -162,6 +162,8 @@ permissions:
                 description: Toggle island borders.
               superior.island.toggle.blocks:
                 description: Toggle stacked blocks placements.
+          superior.island.spawn:
+            description: Teleport to the spawn island.
           superior.island.top:
             description: Open top islands panel.
           superior.island.transfer:

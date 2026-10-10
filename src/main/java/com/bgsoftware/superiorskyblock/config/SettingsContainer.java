@@ -135,6 +135,9 @@ public class SettingsContainer {
     public final boolean spawnWorldBorder;
     public final int spawnSize;
     public final boolean spawnDamage;
+    public final Material spawnPortalBlock;
+    public final boolean scoreboardEnabled;
+    public final long scoreboardUpdateInterval;
     public final Set<String> worldPermissions;
     public final boolean voidTeleportMembers;
     public final boolean voidTeleportVisitors;
@@ -390,6 +393,9 @@ public class SettingsContainer {
         spawnWorldBorder = config.getBoolean("spawn.world-border", false);
         spawnSize = config.getInt("spawn.size", 200);
         spawnDamage = config.getBoolean("spawn.players-damage", false);
+        spawnPortalBlock = EnumHelper.getEnum(Material.class, config.getString("spawn.portal-block", "GOLD_BLOCK"));
+        scoreboardEnabled = config.getBoolean("scoreboard.enabled", true);
+        scoreboardUpdateInterval = Math.max(1L, config.getLong("scoreboard.update-interval", 20L));
         worldPermissions = Collections.unmodifiableSet(new LinkedHashSet<>(config.getStringList("world-permissions")
                 .stream().map(str -> str.toUpperCase(Locale.ENGLISH)).collect(Collectors.toSet())));
         voidTeleportMembers = config.getBoolean("void-teleport.members", true);

@@ -61,6 +61,7 @@ import com.bgsoftware.superiorskyblock.island.upgrade.loaders.ItemsUpgradeCostLo
 import com.bgsoftware.superiorskyblock.island.upgrade.loaders.PlaceholdersUpgradeCostLoader;
 import com.bgsoftware.superiorskyblock.island.upgrade.loaders.VaultUpgradeCostLoader;
 import com.bgsoftware.superiorskyblock.listener.BukkitListeners;
+import com.bgsoftware.superiorskyblock.scoreboard.IslandScoreboards;
 import com.bgsoftware.superiorskyblock.mission.MissionsManagerImpl;
 import com.bgsoftware.superiorskyblock.mission.container.DefaultMissionsContainer;
 import com.bgsoftware.superiorskyblock.module.ModulesManagerImpl;
@@ -122,6 +123,7 @@ public class SuperiorSkyblockPlugin extends JavaPlugin implements SuperiorSkyblo
     /* Global handlers */
     private final Updater updater = new Updater(this, "superiorskyblock2");
     private final BukkitListeners bukkitListeners = new BukkitListeners(this);
+    private final IslandScoreboards scoreboardsHandler = new IslandScoreboards(this);
     private final PluginEventsDispatcher pluginEventsDispatcher = new PluginEventsDispatcher(this);
     private final GameEventsDispatcher gameEventsDispatcher = new GameEventsDispatcher(this);
     private IScriptEngine scriptEngine = EnginesFactory.createDefaultEngine();
@@ -336,6 +338,9 @@ public class SuperiorSkyblockPlugin extends JavaPlugin implements SuperiorSkyblo
             if (loadingStage.isAtLeast(PluginLoadingStage.START_ENABLE))
                 BukkitExecutor.prepareShutdown();
 
+            if (loadingStage.isAtLeast(PluginLoadingStage.START_ENABLE))
+                scoreboardsHandler.stop();
+
             if (loadingStage.isAtLeast(PluginLoadingStage.CHUNKS_PROVIDER_INITIALIZED))
                 ChunksProvider.stop();
 
@@ -546,6 +551,10 @@ public class SuperiorSkyblockPlugin extends JavaPlugin implements SuperiorSkyblo
     @Override
     public SchematicsManagerImpl getSchematics() {
         return schematicsHandler;
+    }
+
+    public IslandScoreboards getScoreboards() {
+        return scoreboardsHandler;
     }
 
     @Override

@@ -443,6 +443,18 @@ spawn:
   # Should players get damage in the spawn?
   players-damage: false
 
+  # The block that works as a floor portal in the spawn. When a player jumps onto it,
+  # they get teleported to their island (a new island is created if they don't have one).
+  # Leave empty to disable the portal.
+  portal-block: GOLD_BLOCK
+
+# The scoreboard shown to every online player.
+# Its title and lines are edited in the lang files (SCOREBOARD_TITLE and SCOREBOARD_LINES).
+# The update interval is in ticks (20 ticks = 1 second). Applied after a plugin reload.
+scoreboard:
+  enabled: true
+  update-interval: 20
+
 # A list of permissions players will have in the islands world, outside of islands.
 # By adding permissions to this list, players will be able to grief the world, but not
 # other islands, so use this in caution.

@@ -55,6 +55,7 @@ public class PlayerCommandsMap extends CommandsMap {
         registerCommand(new CmdSettings());
         registerCommand(new CmdSetWarp());
         registerCommand(new CmdShow());
+        registerCommand(new CmdSpawn());
         registerCommand(new CmdTeam());
         registerCommand(new CmdTeamChat());
         registerCommand(new CmdTeleport());

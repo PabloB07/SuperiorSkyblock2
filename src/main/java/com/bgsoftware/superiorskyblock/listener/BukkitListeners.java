@@ -31,6 +31,7 @@ public class BukkitListeners {
         new PlayersListener(this.plugin);
         new PortalsListener(this.plugin);
         new ProtectionListener(this.plugin);
+        new ScoreboardListener(this.plugin);
         new SignsListener(this.plugin);
         new StackedBlocksListener(this.plugin);
         new WorldDestructionListener(this.plugin);

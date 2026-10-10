@@ -1,7 +1,9 @@
 package com.bgsoftware.superiorskyblock.config.section;
 
+import com.bgsoftware.common.annotations.Nullable;
 import com.bgsoftware.superiorskyblock.api.config.SettingsManager;
 import com.bgsoftware.superiorskyblock.config.SettingsContainerHolder;
+import org.bukkit.Material;
 
 import java.util.List;
 
@@ -40,6 +42,11 @@ public class SpawnSection extends SettingsContainerHolder implements SettingsMan
     @Override
     public boolean isPlayersDamage() {
         return getContainer().spawnDamage;
+    }
+
+    @Nullable
+    public Material getPortalBlock() {
+        return getContainer().spawnPortalBlock;
     }
 
 }

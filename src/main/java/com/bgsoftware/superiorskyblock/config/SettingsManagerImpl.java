@@ -1,5 +1,6 @@
 package com.bgsoftware.superiorskyblock.config;
 
+import com.bgsoftware.common.annotations.Nullable;
 import com.bgsoftware.common.config.CommentedConfiguration;
 import com.bgsoftware.superiorskyblock.SuperiorSkyblockPlugin;
 import com.bgsoftware.superiorskyblock.api.config.SettingsManager;
@@ -20,6 +21,7 @@ import com.bgsoftware.superiorskyblock.config.section.IslandChestsSection;
 import com.bgsoftware.superiorskyblock.config.section.IslandNamesSection;
 import com.bgsoftware.superiorskyblock.config.section.IslandPreviewsSection;
 import com.bgsoftware.superiorskyblock.config.section.IslandRolesSection;
+import com.bgsoftware.superiorskyblock.config.section.ScoreboardSection;
 import com.bgsoftware.superiorskyblock.config.section.SpawnSection;
 import com.bgsoftware.superiorskyblock.config.section.StackedBlocksSection;
 import com.bgsoftware.superiorskyblock.config.section.VisitorsSignSection;
@@ -31,6 +33,7 @@ import com.bgsoftware.superiorskyblock.core.events.plugin.PluginEventsFactory;
 import com.bgsoftware.superiorskyblock.core.logging.Log;
 import com.bgsoftware.superiorskyblock.player.inventory.ClearActions;
 import org.bukkit.Location;
+import org.bukkit.Material;
 import org.bukkit.configuration.file.YamlConfiguration;
 
 import java.io.File;
@@ -65,6 +68,7 @@ public class SettingsManagerImpl extends Manager implements SettingsManager {
     private final VisitorsSignSection visitorsSign = new VisitorsSignSection();
     private final WorldsSection worlds = new WorldsSection();
     private final SpawnSection spawn = new SpawnSection();
+    private final ScoreboardSection scoreboard = new ScoreboardSection();
     private final VoidTeleportSection voidTeleport = new VoidTeleportSection();
     private final IslandNamesSection islandNames = new IslandNamesSection();
     private final AFKIntegrationsSection afkIntegrations = new AFKIntegrationsSection();
@@ -215,6 +219,15 @@ public class SettingsManagerImpl extends Manager implements SettingsManager {
     @Override
     public Spawn getSpawn() {
         return this.spawn;
+    }
+
+    @Nullable
+    public Material getSpawnPortalBlock() {
+        return this.spawn.getPortalBlock();
+    }
+
+    public ScoreboardSection getScoreboard() {
+        return this.scoreboard;
     }
 
     @Override
@@ -769,6 +782,7 @@ public class SettingsManagerImpl extends Manager implements SettingsManager {
         this.visitorsSign.setContainer(container);
         this.worlds.setContainer(container);
         this.spawn.setContainer(container);
+        this.scoreboard.setContainer(container);
         this.voidTeleport.setContainer(container);
         this.islandNames.setContainer(container);
         this.afkIntegrations.setContainer(container);

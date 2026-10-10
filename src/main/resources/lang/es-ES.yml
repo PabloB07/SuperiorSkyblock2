@@ -293,6 +293,20 @@ COMMAND_DESCRIPTION_TEAM: 'Obtenga información sobre el estado de los miembros 
 COMMAND_DESCRIPTION_TEAM_CHAT: 'Alternar el modo de chat de equipo.'
 COMMAND_DESCRIPTION_TELEPORT: 'Teletransportarse a su isla.'
 COMMAND_DESCRIPTION_TOGGLE: 'Alternar el borde de la isla y ubicaciones del apilador de bloques.'
+# Scoreboard. Variables: {player}, {online}, {island_name}, {island_level}, {island_worth}
+# Supports &codes, {HEX:RRGGBB} and <gradient:#RRGGBB:#RRGGBB>text</gradient> (gradients need 1.16+).
+SCOREBOARD_TITLE: '<gradient:#FF7E5F:#FEB47B>SuperiorSkyblock</gradient>'
+SCOREBOARD_LINES:
+  - ''
+  - '&7Jugador: &f{player}'
+  - '&7En línea: &a{online}'
+  - ''
+  - '&7Isla: <gradient:#00C6FF:#0072FF>{island_name}</gradient>'
+  - '&7Nivel: &e{island_level}'
+  - '&7Valor: &6{island_worth}'
+  - ''
+  - '&{HEX:FFD700}play.tuservidor.com'
+COMMAND_DESCRIPTION_SPAWN: 'Teletransportarse a la isla del spawn.'
 COMMAND_DESCRIPTION_TOP: 'Abre el panel de Top Islas.'
 COMMAND_DESCRIPTION_TRANSFER: 'Transfiera el liderazgo de su isla.'
 COMMAND_DESCRIPTION_UNCOOP: 'Elimina a un jugador cooperativo de tu isla.'
