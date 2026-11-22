@@ -98,6 +98,11 @@ shadowJar {
     archiveClassifier.set('')
 
     from sourceSets.main.output
+    def apiShadowJar = project(':API').tasks.named('shadowJar')
+    dependsOn(apiShadowJar)
+    from(apiShadowJar.map { zipTree(it.archiveFile.get().asFile) }) {
+        exclude 'META-INF/MANIFEST.MF', 'META-INF/*.SF', 'META-INF/*.DSA', 'META-INF/*.RSA'
+    }
 
     from(project.configurations.runtimeClasspath.filter { it.name.endsWith('.jar') }.collect { zipTree(it) }) {
         exclude 'META-INF/MANIFEST.MF', 'META-INF/*.SF', 'META-INF/*.DSA', 'META-INF/*.RSA'
@@ -106,6 +111,9 @@ shadowJar {
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 
     subprojects.each { sub ->
+        if (sub.path == ':API')
+            return
+
         if (sub.path.startsWith(':NMS:v1')) {
             try {
                 def reobfTask = sub.tasks.named('reobfJar')

@@ -90,6 +90,10 @@ public class SchematicsManagerImpl extends Manager implements SchematicManager {
             Resources.saveResource("schematics/normal_the_end.schematic");
         }
 
+        File siftSchematic = new File(schematicsFolder, "normal_sift.schematic");
+        if (!siftSchematic.exists())
+            Resources.saveResource("schematics/normal_sift.schematic");
+
         loadDefaultSchematicParsers();
         loadSchematics();
     }

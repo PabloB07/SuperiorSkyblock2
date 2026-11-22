@@ -12,16 +12,12 @@ import com.bgsoftware.superiorskyblock.island.IslandUtils;
 import com.bgsoftware.superiorskyblock.island.top.SortingTypes;
 import com.bgsoftware.superiorskyblock.player.PlayerLocales;
 import org.bukkit.Bukkit;
-import org.bukkit.DyeColor;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
-import org.bukkit.block.banner.Pattern;
-import org.bukkit.block.banner.PatternType;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.InventoryHolder;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.meta.BannerMeta;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.persistence.PersistentDataContainer;
 import org.bukkit.persistence.PersistentDataType;
@@ -46,7 +42,7 @@ public class SpawnMenu {
     static final int SLOT_CREATE = 15;
     static final int SLOT_LANGUAGE = 22;
 
-    // Menu files whose bundled Spanish translations get applied when the language flag is clicked.
+    // Menu files whose bundled Spanish translations get applied from the language selector.
     private static final String[] SPANISH_MENUS = {
             "bank-logs.yml", "banned-players.yml", "biomes.yml", "border-color.yml", "confirm-ban.yml",
             "confirm-disband.yml", "confirm-kick.yml", "confirm-leave.yml", "confirm-transfer.yml",
@@ -113,7 +109,7 @@ public class SpawnMenu {
                 Message.SPAWN_MENU_PROFILE_NAME.getMessage(locale), profileLore(superiorPlayer, locale)));
         inventory.setItem(SLOT_CREATE, named(material("GRASS_BLOCK", "GRASS"),
                 Message.SPAWN_MENU_CREATE_NAME.getMessage(locale), Message.SPAWN_MENU_CREATE_LORE.getMessage(locale)));
-        inventory.setItem(SLOT_LANGUAGE, chileanBanner(Message.SPAWN_MENU_LANGUAGE_NAME.getMessage(locale),
+        inventory.setItem(SLOT_LANGUAGE, named(material("BOOK"), Message.SPAWN_MENU_LANGUAGE_NAME.getMessage(locale),
                 Message.SPAWN_MENU_LANGUAGE_LORE.getMessage(locale)));
 
         player.openInventory(inventory);
@@ -208,24 +204,6 @@ public class SpawnMenu {
         } catch (ReflectiveOperationException ignored) {
             return null;
         }
-    }
-
-    private static ItemStack chileanBanner(String name, String lore) {
-        ItemStack banner = new ItemStack(material("WHITE_BANNER", "BANNER"));
-        BannerMeta meta = (BannerMeta) banner.getItemMeta();
-
-        // EnumHelper handles both legacy enum names and modern interface constants.
-        PatternType bottomStripe = EnumHelper.getEnum(PatternType.class, "STRIPE_BOTTOM", "HALF_HORIZONTAL_BOTTOM");
-        PatternType topLeftSquare = EnumHelper.getEnum(PatternType.class, "SQUARE_TOP_LEFT");
-        if (bottomStripe != null)
-            meta.addPattern(new Pattern(DyeColor.RED, bottomStripe));
-        if (topLeftSquare != null)
-            meta.addPattern(new Pattern(DyeColor.BLUE, topLeftSquare));
-
-        meta.setDisplayName(text(name));
-        meta.setLore(lore(lore));
-        banner.setItemMeta(meta);
-        return banner;
     }
 
     private static ItemStack named(Material material, String name, String... lore) {

@@ -245,6 +245,7 @@ public class GridManagerImpl extends Manager implements GridManager {
                 createIslandInternalAsync(builder, biome, offset, schematic, spawnOffset);
             }
         } catch (Throwable error) {
+            SiftIslands.discard(builder.owner.getUniqueId());
             Log.entering("ENTER", builder.owner.getName(), builder.islandType, biome, offset);
             Log.error(error, "An unexpected error occurred while creating an island:");
             builder.owner.setIsland(null);
@@ -262,8 +263,10 @@ public class GridManagerImpl extends Manager implements GridManager {
         // Removing any active previews for the player.
         boolean updateGameMode = this.islandPreviews.endIslandPreview(builder.owner) != null;
 
-        if (!PluginEventsFactory.callPreIslandCreateEvent(builder.owner, builder.islandName))
+        if (!PluginEventsFactory.callPreIslandCreateEvent(builder.owner, builder.islandName)) {
+            SiftIslands.discard(builder.owner.getUniqueId());
             return;
+        }
 
         builder.setUniqueId(generateIslandUUID());
 
@@ -275,6 +278,10 @@ public class GridManagerImpl extends Manager implements GridManager {
 
             pendingCreationTasks.remove(builder.owner.getUniqueId());
 
+            if (error != null || islandCreationResult == null ||
+                    islandCreationResult.getStatus() != IslandCreationAlgorithm.IslandCreationResult.Status.SUCCESS)
+                SiftIslands.discard(builder.owner.getUniqueId());
+
             if (error == null && islandCreationResult != null) {
                 Log.debugResult(Debug.CREATE_ISLAND, "Creation Callback", "Successfully created island");
 
@@ -283,6 +290,7 @@ public class GridManagerImpl extends Manager implements GridManager {
                             schematic, updateGameMode, startTime, islandCreationResult);
                     return;
                 } catch (Throwable runtimeError) {
+                    SiftIslands.discard(builder.owner.getUniqueId());
                     error = runtimeError;
                 }
             }
@@ -360,11 +368,13 @@ public class GridManagerImpl extends Manager implements GridManager {
 
         island.setIslandHome(defaultDimension, SWorldPosition.of(homeLocation));
 
-        if (SiftIslands.consume(builder.owner.getUniqueId())) {
+        Biome siftBiome = SiftIslands.consume(builder.owner.getUniqueId());
+        if (siftBiome != null) {
             BukkitExecutor.sync(() -> {
                 Dimension sift = com.bgsoftware.superiorskyblock.world.Dimensions.findByName("sift");
                 if (sift == null)
                     return;
+                island.setBiome(sift, siftBiome, IslandBiomeFlags.UPDATE_BLOCKS | IslandBiomeFlags.UPDATE_DIMENSION);
                 PortalsManagerServiceImpl portals = (PortalsManagerServiceImpl) plugin.getServices()
                         .getService(PortalsManagerService.class);
                 portals.teleportIslandToDimension(builder.owner, island, sift);

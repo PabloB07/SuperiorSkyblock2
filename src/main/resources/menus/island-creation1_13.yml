@@ -23,7 +23,8 @@ items:
       skull: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzk1ZDM3OTkzZTU5NDA4MjY3ODQ3MmJmOWQ4NjgyMzQxM2MyNTBkNDMzMmEyYzdkOGM1MmRlNDk3NmIzNjIifX19'
       name: '&eNormal Island &a(Available)'
       lore:
-        - '&7Simple island with trees and a mining area!'
+        - '&7Balanced survival start with trees and a mining area.'
+        - '&7Biome: Plains.'
         - '&7 '
         - '&7&o(( &f&oRight-Click &7&oto preview the island. ))'
     no-access:
@@ -31,7 +32,8 @@ items:
       skull: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYzk1ZDM3OTkzZTU5NDA4MjY3ODQ3MmJmOWQ4NjgyMzQxM2MyNTBkNDMzMmEyYzdkOGM1MmRlNDk3NmIzNjIifX19'
       name: '&eNormal Island &c(Unavailable)'
       lore:
-        - '&7Simple island with trees and a mining area!'
+        - '&7Balanced survival start with trees and a mining area.'
+        - '&7Biome: Plains.'
         - '&7 '
         - '&7&o(( &f&oRight-Click &7&oto preview the island. ))'
   '^':
@@ -43,7 +45,8 @@ items:
       skull: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWE0NWQxYjQxN2NiZGRjMjE3NjdiMDYwNDRlODk5YjI2NmJmNzhhNjZlMjE4NzZiZTNjMDUxNWFiNTVkNzEifX19'
       name: '&eMycelium Island &a(Available)'
       lore:
-        - '&7Customized island with lots of mycelium!'
+        - '&7Mushroom-themed island with mycelium terrain.'
+        - '&7Biome: Mushroom Fields.'
         - '&7 '
         - '&7&o(( &f&oRight-Click &7&oto preview the island. ))'
     no-access:
@@ -51,7 +54,8 @@ items:
       skull: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZWE0NWQxYjQxN2NiZGRjMjE3NjdiMDYwNDRlODk5YjI2NmJmNzhhNjZlMjE4NzZiZTNjMDUxNWFiNTVkNzEifX19'
       name: '&eMycelium Island &c(Unavailable)'
       lore:
-        - '&7Customized island with lots of mycelium!'
+        - '&7Mushroom-themed island with mycelium terrain.'
+        - '&7Biome: Mushroom Fields.'
         - '&7 '
         - '&7&o(( &f&oRight-Click &7&oto preview the island. ))'
   '$':
@@ -63,7 +67,8 @@ items:
       skull: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjVkYjMxMjA2N2JlMWQ1YzRmMTQ3OGFmM2NhMmY2Y2Y4MTA0YWI0Y2NiZmY1NzkxN2M4NTc4ZGFhMTUwMDJjMiJ9fX0='
       name: '&eDesert Island &a(Available)'
       lore:
-        - '&7Customized island with lots of sand!'
+        - '&7Desert-themed island with a sandy starting area.'
+        - '&7Biome: Desert.'
         - '&7 '
         - '&7&o(( &f&oRight-Click &7&oto preview the island. ))'
     no-access:
@@ -71,7 +76,8 @@ items:
       skull: 'eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjVkYjMxMjA2N2JlMWQ1YzRmMTQ3OGFmM2NhMmY2Y2Y4MTA0YWI0Y2NiZmY1NzkxN2M4NTc4ZGFhMTUwMDJjMiJ9fX0='
       name: '&eDesert Island &c(Unavailable)'
       lore:
-        - '&7Customized island with lots of sand!'
+        - '&7Desert-themed island with a sandy starting area.'
+        - '&7Biome: Desert.'
         - '&7 '
         - '&7&o(( &f&oRight-Click &7&oto preview the island. ))'
   '&':
@@ -81,18 +87,28 @@ items:
     sift: true
     access:
       type: AMETHYST_BLOCK
-      name: '&dIsla Sift &a(Available)'
+      name: '&dSift Island &a(Available)'
       lore:
-        - '&7Isla en la dimensión Sift, con sus biomas propios.'
+        - '&7Procedural island in the custom Sift dimension.'
+        - '&7A personal biome is selected on creation.'
+        - '&7Sift biomes: Pink Meadows, Frost Forest,'
+        - '&7Red Spires, and Shattered Peaks.'
+        - '&7Vanilla biomes are used as compatible fallbacks.'
+        - '&7Requires worlds.dimensions.sift.enabled: true.'
         - '&7 '
-        - '&7&o(( &f&oClic &7&opara crear tu isla Sift. ))'
+        - '&7&o(( &f&oClick to create your Sift island. ))'
     no-access:
       type: AMETHYST_BLOCK
-      name: '&dIsla Sift &c(Unavailable)'
+      name: '&dSift Island &c(Unavailable)'
       lore:
-        - '&7Isla en la dimensión Sift, con sus biomas propios.'
+        - '&7Procedural island in the custom Sift dimension.'
+        - '&7A personal biome is selected on creation.'
+        - '&7Sift biomes: Pink Meadows, Frost Forest,'
+        - '&7Red Spires, and Shattered Peaks.'
+        - '&7Vanilla biomes are used as compatible fallbacks.'
+        - '&7Requires worlds.dimensions.sift.enabled: true.'
         - '&7 '
-        - '&7&o(( &f&oClic &7&opara crear tu isla Sift. ))'
+        - '&7&o(( &f&oClick to create your Sift island. ))'
   '~':
     type: BLACK_STAINED_GLASS_PANE
     name: '&f'

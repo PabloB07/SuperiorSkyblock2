@@ -729,6 +729,7 @@ public enum Message {
     SPAWN_MENU_LANGUAGE_LORE("&7Switch the language to Spanish."),
     SPAWN_LANGUAGE_CHANGED("&aLanguage changed to Spanish."),
     SPAWN_ONLY_AT_SPAWN("&cYou can only use this item at spawn."),
+    SIFT_DIMENSION_DISABLED("&cThe Sift dimension is not available. Ask an administrator to enable it."),
     SPY_LOCAL_CHAT_FORMAT,
     SPY_TEAM_CHAT_FORMAT,
     SYNC_UPGRADES,

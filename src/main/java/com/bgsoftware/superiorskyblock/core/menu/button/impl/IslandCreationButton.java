@@ -1,12 +1,13 @@
 package com.bgsoftware.superiorskyblock.core.menu.button.impl;
 
 import com.bgsoftware.common.annotations.Nullable;
+import com.bgsoftware.superiorskyblock.api.config.SettingsManager;
 import com.bgsoftware.superiorskyblock.api.menu.MenuIslandCreationConfig;
-import com.bgsoftware.superiorskyblock.world.sift.SiftIslands;
 import com.bgsoftware.superiorskyblock.api.menu.button.MenuTemplateButton;
 import com.bgsoftware.superiorskyblock.api.menu.button.click.ButtonClickContext;
 import com.bgsoftware.superiorskyblock.api.menu.dialog.DialogButton;
 import com.bgsoftware.superiorskyblock.api.schematic.Schematic;
+import com.bgsoftware.superiorskyblock.api.world.Dimension;
 import com.bgsoftware.superiorskyblock.api.world.GameSound;
 import com.bgsoftware.superiorskyblock.api.wrappers.BlockOffset;
 import com.bgsoftware.superiorskyblock.api.wrappers.SuperiorPlayer;
@@ -18,6 +19,10 @@ import com.bgsoftware.superiorskyblock.core.menu.button.AbstractMenuTemplateButt
 import com.bgsoftware.superiorskyblock.core.menu.button.AbstractMenuViewButton;
 import com.bgsoftware.superiorskyblock.core.menu.button.MenuTemplateButtonImpl;
 import com.bgsoftware.superiorskyblock.core.menu.impl.MenuIslandCreation;
+import com.bgsoftware.superiorskyblock.core.messages.Message;
+import com.bgsoftware.superiorskyblock.world.Dimensions;
+import com.bgsoftware.superiorskyblock.world.sift.SiftIslands;
+import com.bgsoftware.superiorskyblock.world.sift.SiftWorld;
 import org.bukkit.Bukkit;
 import org.bukkit.block.Biome;
 import org.bukkit.inventory.ItemStack;
@@ -25,6 +30,7 @@ import org.bukkit.inventory.ItemStack;
 import java.math.BigDecimal;
 import java.util.Collections;
 import java.util.List;
+import java.util.Locale;
 import java.util.Objects;
 
 public class IslandCreationButton extends AbstractMenuViewButton<MenuIslandCreation.View> {
@@ -49,8 +55,22 @@ public class IslandCreationButton extends AbstractMenuViewButton<MenuIslandCreat
     @Override
     public void onButtonClick(ButtonClickContext<MenuIslandCreation.View> context) {
         SuperiorPlayer clickedPlayer = plugin.getPlayers().getSuperiorPlayer(context.getPlayer());
-        if (getTemplate().siftDimension)
+        boolean isPreviewMode = context.getClickType().isRightClick() && plugin.getSettings()
+                .getIslandPreviews().getLocations().get(getTemplate().getSchematic().getName()
+                        .toLowerCase(Locale.ENGLISH)) != null;
+        if (getTemplate().siftDimension && !isPreviewMode) {
+            Dimension dimension = Dimensions.findByName(SiftWorld.WORLD_NAME);
+            SettingsManager.Worlds.DimensionConfig config =
+                    dimension == null ? null : plugin.getSettings().getWorlds().getDimensionConfig(dimension);
+            if (config == null || !config.isEnabled() || Bukkit.getWorld(SiftWorld.WORLD_NAME) == null) {
+                SiftIslands.discard(clickedPlayer.getUniqueId());
+                Message.SIFT_DIMENSION_DISABLED.send(clickedPlayer);
+                return;
+            }
             SiftIslands.mark(clickedPlayer.getUniqueId());
+        } else {
+            SiftIslands.discard(clickedPlayer.getUniqueId());
+        }
         MenuActions.simulateIslandCreationClick(clickedPlayer, menuView.getIslandName(),
                 getTemplate().getCreationConfig(),
                 context.getClickType().isRightClick(), menuView);
